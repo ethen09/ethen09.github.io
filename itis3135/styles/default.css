@@ -21,3 +21,6 @@ nav{
     justify-content:space-around;
     text-align: center;
 }
+*:hover{
+    color:bisque;
+}
