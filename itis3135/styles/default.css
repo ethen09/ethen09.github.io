@@ -1,7 +1,7 @@
 body{
     font-size: 1.2 em;
-    color: rgb(221, 221, 221);
-    background-color: rgb(34, 34, 34);
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 231, 224);
     box-sizing: border-box;
     margin: 0;
     padding:0;
@@ -21,6 +21,12 @@ nav{
     justify-content:space-around;
     text-align: center;
 }
-body:hover{
-    color:bisque;
+a{
+    color:blueviolet;
+    text-decoration:none;
+
+}
+a:hover{
+    color:rgb(48, 27, 4);
+    text-decoration:rgb(from color r g b)
 }
