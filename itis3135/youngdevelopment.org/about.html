@@ -5,15 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- https://coolors.co/a4b494-bec5ad-3b5249-2e1017-e79ca5 -->
     <link rel="stylsheet" href="youngdevelopment.css" />
-    <title>youngdevelopment Design Firm | ITIS3135 | Home</title>
-  </head>
-  <body>
-    <h1>Young Development</h1>
-    <img src="/itis3135/images/Yak-pngarts-Image.png" alt="Company Logo" />
+    <title>youngdevelopment Design Firm | ITIS3135 | About</title>
+    <style>
+      * {
+        background-color: rgb(253, 238, 221);
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        height: 60px;
+        width: auto;
+      }
+      .logopng {
+        display: block;
+        margin-top: 20px;
+        margin-left: 20px;
+        height: 100px;
+        width: auto;
+      }
 
+      h1 {
+        font-size: 2.5rem;
+        color: #000000;
+        text-align: center;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+      }
+      h2 {
+        font-family: "Lucida Sans", "Trebuchet MS", "Lucida Sans Unicode";
+      }
+
+      p {
+        font-family: "Verdana";
+      }
+      ul li{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size:1.5em;
+      }
+      ul li p {
+        font-family: "Verdana";
+        font-weight:normal;
+        font-size:.5em;
+      }
+    </style>
+  </head>
+  <header class="logo">
+    <h1>Young Development</h1>
+    <img
+      class="logopng"
+      src="/itis3135/images/Yak-pngarts-Image.png"
+      alt="Company Logo"
+    />
+  </header>
+  <body>
     <h2>Young Design Services</h2>
 
-    <p>
+    <p class="about">
       At Young Development Design Firm, we focus on the development and design
       for businesses, campaigns, organizations, and individuals to help grow
       their ideas to be the project of their dreams. Our talents have no limits,
@@ -24,7 +71,7 @@
 
     <ul>
       <li>
-        Customer Care
+        <strong>Customer Care</strong>
         <p>
           Our focus is on taking care of our customers' needs, and that starts
           with communication. We always, always do our research on our clients
@@ -33,7 +80,7 @@
         </p>
       </li>
       <li>
-        Web Development
+        <strong>Web Development</strong>
         <p>
           From simple personal blog pages to elaborate storefront pages, we can
           develop anything you think of with experts in HTML, CSS, and
@@ -41,7 +88,7 @@
         </p>
       </li>
       <li>
-        Mobile App Development
+       <strong>Mobile App Development</strong> 
         <p>
           Your storefront deserves to be accessible to all, and we can make that
           happen. We ensure our products are dynamic and designed with the
@@ -50,7 +97,7 @@
         </p>
       </li>
       <li>
-        Graphics and Design
+        <strong>Graphics and Design</strong>
         <p>
           The creatives on our team are diverse and offer many unique
           perspectives that we can work with to ensure we've addressed the task
@@ -59,7 +106,7 @@
         </p>
       </li>
       <li>
-        E-commerce & Digital Marketing
+        <strong>E-commerce & Digital Marketing</strong>
         <p>
           From bake sales to corporations, no matter the size of your operation,
           we are here to develop a dynamic and secure e-commerce platform for
@@ -78,10 +125,10 @@
   </body>
   <footer>
     <p>
-      <strong>Address:</strong> 123 Young Drive, Charlotte, FL 001 <br>
-      <strong>Phone:</strong> +1(424)-123-4567<br>
-      <strong>Email:</strong> contact@youngdevelopment.com <br>
-      <strong>by Young Corp &copy; 2025</strong>  
+      <strong>Address:</strong> 123 Young Drive, Charlotte, FL 001 <br />
+      <strong>Phone:</strong> +1(424)-123-4567<br />
+      <strong>Email:</strong> contact@youngdevelopment.com <br />
+      <strong>by Young Corp &copy; 2025</strong>
     </p>
   </footer>
 </html>
