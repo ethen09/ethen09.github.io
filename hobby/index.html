@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethen Young's Skateboarding Hobby Site</title>
+    <style>
+      body {
+        background-color: #b3c0a4; /* Dark background for contrast */
+        font-family: 'Cambria', Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      body p{
+        color: #505168; /* Light text for readability */
+        font-family: "Arial", sans-serif;
+      }
+      header {
+        background-color: #505168; /* Slightly different shade for contrast */
+        padding: 20px;
+        width: 100%;
+        
+      }
+
+      header h1 {
+        color: #f1c45b;
+        margin: 0;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+      }
+
+    nav {
+    position: sticky;
+    top: 0;     
+    left: 0; /* Optional: Stick to left if needed */
+    width: 100%; /* Ensure full width */
+    background-color: #3C3A51; /* Background color for visibility */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row; /* Change to column if you want a vertical menu */
+    justify-content:space-evenly; /* Spread items evenly */
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    color: #dcc48e;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d2b164;
+}
+
+
+      nav a {
+        text-decoration: none;
+        color: #f39c12; /* Goldish color for contrast */
+        font-weight: bold;
+        margin: 0 15px;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #e67e22; /* Slightly different shade on hover */
+      }
+
+      main {
+        max-width: 800px;
+        padding: 20px;
+        background-color: #3b4b5e; /* Dark but distinct from header */
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      section {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      section.active {
+        position: relative;
+        opacity: 1;
+        display: block;
+      }
+      #home figure{
+    opacity:.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Skateboarding</h1>
+    </header>
+      <nav>
+        <ul>
+          <li><a href="#index" onclick="showSection('home')">Home</a></li>
+          <li>
+            <a href="#about" onclick="showSection('about')">About</a>
+          </li>
+          <li>
+            <a href="#schedule" onclick="showSection('schedule')">Schedule</a>
+          </li>
+          <li><a href="#where" onclick="showSection('where')">Where?</a></li>
+          <li><a href="#how" onclick="showSection('how')">How</a></li>
+          <li><a href="#why" onclick="showSection('why')">Why</a></li>
+          <li>
+            <a href="#about" onclick="showSection('about')">Ai Prompts</a>
+          </li>
+        </ul>
+      </nav>
+    <section id="home" class="active">
+      <h2>Home</h2>
+      <p>
+        Skateboarding is the art of capturing light with a camera, whether
+        digital or film. It allows us to freeze moments, tell stories, and
+        explore creativity.
+      </p>
+
+      <figure>
+        <img
+          src="https://images.pexels.com/photos/2086530/pexels-photo-2086530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Skateboarder in the city" style="width:100px ; height:auto;"
+        />
+        <figcaption>
+            Stock Photo of a cruise through the city.
+        </figcaption>
+      </figure>
+      <p>
+
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I'm a huge fan of skateboarding enthusiast who loves thrill of
+        skateboarding and doing tricks, no matter the situation.
+      </p>
+
+      <figure>
+        <img
+          src="photographer_portrait.jpg"
+          alt="Photographer holding a camera"
+        />
+        <figcaption>A passionate photographer in action.</figcaption>
+      </figure>
+      <p>
+        <em
+          >Generated prompt: "A portrait of a professional photographer holding
+          a DSLR camera, looking through the viewfinder."</em
+        >
+      </p>
+    </section>
+
+    <section id="schedule">
+      <h2>Schedule</h2>
+      <p>The best times for skating</p>
+
+      <figure>
+        <img src="golden_hour.jpg" alt="Golden hour photography" />
+        <figcaption>
+          Sunset during the golden hour, perfect lighting.
+        </figcaption>
+      </figure>
+      <p>
+        <em
+          >Generated prompt: "A warm and glowing sunset over a calm lake, ideal
+          for golden hour photography."</em
+        >
+      </p>
+    </section>
+
+    <section id="where">
+      <h2>Where?</h2>
+      <p>
+        Great places to capture amazing photos include national parks, bustling
+        city streets, and quiet coastal areas.
+      </p>
+
+      <figure>
+        <img
+          src="city_street_photography.jpg"
+          alt="Street photography in a city"
+        />
+        <figcaption>Street photography capturing life in the city.</figcaption>
+      </figure>
+      <p>
+        <em
+          >Generated prompt: "A vibrant city street at night, long exposure
+          showing car lights and neon signs."</em
+        >
+      </p>
+    </section>
+
+    <section id="how">
+      <h2>How to</h2>
+      <p>How to get started.</p>
+
+      <table>
+        <tr>
+          <th>Technique</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Rule of Thirds</td>
+          <td>
+            Dividing your frame into thirds to create balanced compositions.
+          </td>
+        </tr>
+        <tr>
+          <td>Leading Lines</td>
+          <td>Using natural lines to guide the viewer’s eyes.</td>
+        </tr>
+      </table>
+
+      <figure>
+        <img src="composition.jpg" alt="Composition in photography" />
+        <figcaption>
+          Example of strong composition using the rule of thirds.
+        </figcaption>
+      </figure>
+      <p>
+        <em
+          >Generated prompt: "A tutorial-style image showcasing the rule of
+          thirds with grid lines and composition tips."</em
+        >
+      </p>
+    </section>
+
+    <section id="Why">
+      <h2>Why Skateboard?</h2>
+      <p>
+        Photography allows us to capture moments, tell stories, and express
+        creativity.
+      </p>
+
+      <figure>
+        <img
+          src="creative_photography.jpg"
+          alt="Creative photography concept"
+        />
+        <figcaption>Photography as a form of self-expression.</figcaption>
+      </figure>
+      <p>
+        <em
+          >Generated prompt: "An artistic photo with multiple reflections in
+          mirrors, symbolizing creativity in photography."</em
+        >
+      </p>
+    </section>
+  </body>
+  <script>
+    document
+      .getElementById("validation-button-html")
+      .setAttribute(
+        "href",
+        "https://validator.w3.org/check?uri=" + location.href
+      );
+    document
+      .getElementById("validation-button-css")
+      .setAttribute(
+        "href",
+        "https://jigaw.w3.org/css-validator/validator?uri=" + location.href
+      );
+  </script>
+  <!--Dynamic sections-->
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.remove("active");
+      });
+      document.getElementById(sectionId).classList.add("active");
+    }
+
+    showSection("home");
+  </script>
+</html>
