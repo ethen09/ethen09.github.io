@@ -7,58 +7,61 @@
     <style>
       body {
         background-color: #b3c0a4; /* Dark background for contrast */
-        font-family: 'Cambria', Helvetica, sans-serif;
+        font-family: "Cambria", Helvetica, sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
-      body p{
+      body p {
         color: #505168; /* Light text for readability */
         font-family: "Arial", sans-serif;
       }
       header {
         background-color: #505168; /* Slightly different shade for contrast */
-        padding: 20px;
+        padding: 0;
         width: 100%;
-        
+        box-sizing: border-box;
+        margin: 0;
       }
 
       header h1 {
         color: #f1c45b;
-        margin: 0;
         font-size: 2.5rem;
         letter-spacing: 2px;
       }
 
-    nav {
-    position: sticky;
-    top: 0;     
-    left: 0; /* Optional: Stick to left if needed */
-    width: 100%; /* Ensure full width */
-    background-color: #3C3A51; /* Background color for visibility */
-    z-index: 1000; /* Ensure it stays above other content */
-}
+      nav {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
 
-nav ul {
-    display: flex;
-    flex-direction: row; /* Change to column if you want a vertical menu */
-    justify-content:space-evenly; /* Spread items evenly */
-    list-style:none;
-    padding: 0;
-    margin: 0;
-}
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #3c3a51;
+        z-index: 1000;
+      }
 
-nav ul li {
-    padding: 10px;
-    color: #dcc48e;
-}
+      nav ul {
+        display: flex;
+        flex-direction: row; /* Change to column if you want a vertical menu */
+        justify-content: space-evenly; /* Spread items evenly */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-nav ul li a {
-    text-decoration: none;
-    color: #d2b164;
-}
+      nav ul li {
+        padding: 10px;
+        color: #dcc48e;
+      }
 
+      nav ul li a {
+        text-decoration: none;
+        color: #d2b164;
+      }
 
       nav a {
         text-decoration: none;
@@ -78,8 +81,8 @@ nav ul li a {
         padding: 20px;
         background-color: #3b4b5e; /* Dark but distinct from header */
         border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        margin-top: 20px;
+        /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        margin-top: 20px; */
       }
 
       p {
@@ -96,8 +99,27 @@ nav ul li a {
         opacity: 1;
         display: block;
       }
-      #home figure{
-    opacity:.5;
+      #home {
+        display: grid;
+        grid-template-columns:auto 1000px;
+      }
+   h2{
+        font-size: 3rem;
+        font-weight:bold;
+        justify-self:stretch;
+
+      }
+      #home p {
+        margin-top:100px;
+        margin-right:400px;
+flex-direction:column-reverse;
+        
+      }
+      #home img,
+      #home figcaption {
+        opacity:.5;
+        max-width: 100%;
+        height: 100%;   
       }
     </style>
   </head>
@@ -105,43 +127,41 @@ nav ul li a {
     <header>
       <h1>Skateboarding</h1>
     </header>
-      <nav>
-        <ul>
-          <li><a href="#index" onclick="showSection('home')">Home</a></li>
-          <li>
-            <a href="#about" onclick="showSection('about')">About</a>
-          </li>
-          <li>
-            <a href="#schedule" onclick="showSection('schedule')">Schedule</a>
-          </li>
-          <li><a href="#where" onclick="showSection('where')">Where?</a></li>
-          <li><a href="#how" onclick="showSection('how')">How</a></li>
-          <li><a href="#why" onclick="showSection('why')">Why</a></li>
-          <li>
-            <a href="#about" onclick="showSection('about')">Ai Prompts</a>
-          </li>
-        </ul>
-      </nav>
+    <nav>
+      <ul>
+        <li><a href="#index" onclick="showSection('home')">Home</a></li>
+        <li>
+          <a href="#about" onclick="showSection('about')">About</a>
+        </li>
+        <li>
+          <a href="#schedule" onclick="showSection('schedule')">Schedule</a>
+        </li>
+        <li><a href="#where" onclick="showSection('where')">Where?</a></li>
+        <li><a href="#how" onclick="showSection('how')">How</a></li>
+        <li><a href="#why" onclick="showSection('why')">Why</a></li>
+        <li>
+          <a href="#about" onclick="showSection('about')">Ai Prompts</a>
+        </li>
+      </ul>
+    </nav>
     <section id="home" class="active">
       <h2>Home</h2>
       <p>
         Skateboarding is the art of capturing light with a camera, whether
         digital or film. It allows us to freeze moments, tell stories, and
-        explore creativity.
+        explore creativity.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
       </p>
 
       <figure>
         <img
           src="https://images.pexels.com/photos/2086530/pexels-photo-2086530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Skateboarder in the city" style="width:100px ; height:auto;"
+          alt="Skateboarder in the city"
+          style="width: 25%; height: auto"
         />
-        <figcaption>
-            Stock Photo of a cruise through the city.
-        </figcaption>
+        <figcaption>Stock Photo of a cruise through the city.</figcaption>
       </figure>
-      <p>
-
-      </p>
     </section>
 
     <section id="about">
