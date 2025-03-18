@@ -34,8 +34,7 @@
       nav {
         box-sizing: border-box;
         margin: 0;
-        padding: 0;
-
+        padding: 10px 0;
         position: sticky;
         top: 0;
         left: 0;
@@ -46,7 +45,6 @@
 
       nav ul {
         display: flex;
-        flex-direction: row; /* Change to column if you want a vertical menu */
         justify-content: space-evenly; /* Spread items evenly */
         list-style: none;
         padding: 0;
@@ -79,10 +77,9 @@
       main {
         max-width: 800px;
         padding: 20px;
-        background-color: #3b4b5e; /* Dark but distinct from header */
+        background-color: #3b4b5e;
         border-radius: 10px;
-        /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-        margin-top: 20px; */
+        margin: 20px;
       }
 
       p {
@@ -99,17 +96,96 @@
         opacity: 1;
         display: block;
       }
+      footer {
+            color: #3b4b5e;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            bottom:auto;
+            vertical-align:text-bottom;
+            text-decoration: underline;
+        }
       #home {
-        display: grid;
-        grid-template-columns:auto 1000px;
+        /* display: grid;
+        grid-template-columns:auto 1000px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-   h2{
-        font-size: 3rem;
-        font-weight:bold;
-        justify-self:stretch;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      #home figure {
+        margin: 0;
+        text-align: center;
+      }
+      #home img {
+        width: 100%;
+        height: auto;
+        float: left;
+        border-radius: 10px;
+      }
+      #about {
+        /* display: grid;
+        grid-template-columns:auto 1000px; */
+        display: block;
+        flex-direction: column;
+        align-items: left;
+      }
+      #home figcaption {
+        font-style: italic;
+        margin-top: 10px;
+      }
+      #about figure {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      #about img {
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+      }
+
+      #about figcaption {
+        font-style: italic;
+        margin-top: 10px;
+      }
+
+      #about p {
+        margin: 25px;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        color: #f1c45b;
+      }
+      table,th,td {
+        border: 1px solid #505168;
+        background-color: #16183c;
 
       }
-      #home p {
+      th {
+        background-color: #505168;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      label {
+        color: #000000;
+        font-weight: bold;
+        font-size: large;
+      }
+      /* #home p {
         margin-top:100px;
         margin-right:400px;
 flex-direction:column-reverse;
@@ -119,8 +195,9 @@ flex-direction:column-reverse;
       #home figcaption {
         opacity:.5;
         max-width: 100%;
+        float:left;
         height: 100%;   
-      }
+      } */
     </style>
   </head>
   <body>
@@ -147,43 +224,78 @@ flex-direction:column-reverse;
     <section id="home" class="active">
       <h2>Home</h2>
       <p>
-        Skateboarding is the art of capturing light with a camera, whether
-        digital or film. It allows us to freeze moments, tell stories, and
-        explore creativity.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-
+        Skateboarding is a sport and recreation, which a person rides on a board
+        balanced on two sets of wheels. This hobby is popular with the younger
+        crowd, most likley due to it's reputation as an 'extreme' sport as well
+        as it's proximity to progressive cultures and self expression. To me
+        skateboarding is an oppurtunity for diversity in community and
+        companionship.
       </p>
 
       <figure>
         <img
           src="https://images.pexels.com/photos/2086530/pexels-photo-2086530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Skateboarder in the city"
-          style="width: 25%; height: auto"
         />
         <figcaption>Stock Photo of a cruise through the city.</figcaption>
       </figure>
+      <p>
+        Starting small in the 1950s as surfboards with wheels, skateboarding has
+        evolved into a cultural phenomenon. It's not just about the adrenaline
+        or the rebellious nature, it's about the community, the art, and the
+        freedom and represention. Today skateboarding has grown into a culture
+        and lifestyle, many people making their own out of it, a way to escape
+        their day to day lives.
+      </p>
     </section>
 
     <section id="about">
       <h2>About</h2>
       <p>
-        I'm a huge fan of skateboarding enthusiast who loves thrill of
-        skateboarding and doing tricks, no matter the situation.
+        I started skateboarding when I was younger, in middleschool. I did it to
+        get outside, I didn't have convenient friends to play with. Once I
+        started skateboarding, I'd run into people who also skateboard and with
+        that I began to feel a sense of community. That was enough to keep me
+        hooked, then along with it came the culture which I resonated with. I no
+        longer skate for the fun of it but the community and people keep me
+        here, even if I can't do all the coolest tricks I know I had lots of fun
+        hanging out with friends and making memories. Contact me below and maybe
+        we could hang out and skate sometime.
       </p>
 
       <figure>
         <img
-          src="photographer_portrait.jpg"
-          alt="Photographer holding a camera"
+          src="https://images.pexels.com/photos/5368955/pexels-photo-5368955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Friends hanging out skateboarding"
         />
-        <figcaption>A passionate photographer in action.</figcaption>
+        <figcaption>
+          Stock photo, friends enjoying eachothers company in skateboarding.
+        </figcaption>
       </figure>
-      <p>
-        <em
-          >Generated prompt: "A portrait of a professional photographer holding
-          a DSLR camera, looking through the viewfinder."</em
-        >
-      </p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" placeholder="ijbol" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="xxx@example.com"
+          name="email"
+          required
+        />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="hi! ijbol"
+          rows="5"
+          required
+        ></textarea>
+
+        <button type="submit">Send</button>
+      </form>
     </section>
 
     <section id="schedule">
@@ -191,39 +303,70 @@ flex-direction:column-reverse;
       <p>The best times for skating</p>
 
       <figure>
-        <img src="golden_hour.jpg" alt="Golden hour photography" />
+        <img src="https://images.pexels.com/photos/1152854/pexels-photo-1152854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sailors sky, skater midair going into bowl" />
         <figcaption>
-          Sunset during the golden hour, perfect lighting.
+          Stock photo, skater airborne re-entering bowl.
         </figcaption>
       </figure>
-      <p>
-        <em
-          >Generated prompt: "A warm and glowing sunset over a calm lake, ideal
-          for golden hour photography."</em
-        >
-      </p>
+      <table>
+        <tr>
+          <th>Season</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Winter</td>
+          <td>In the afternoon when the sun is the brightest. The warm sun and the brisk air will keep you cool as you skate and
+            run tricks over and over, .
+          </td>
+        </tr>
+        <tr>
+          <td>Spring</td>
+          <td>Early in the morning or just in the afternoon before the tempurature reaches it's peak. The spring is allergy season 
+            but if you can manage this could be the most magical time of year to skate, plants blooming and its the first time alot of pople go outside
+            that year.
+          </td>
+        </tr>
+        <tr>
+          <td>Summer</td>
+          <td>Early in the morning or late at night is the trick. Skating in the summer can be tricky depending on where you live. The sun can either be a 
+            blessing or a curse, dehydrating you and blistering your skin or glowing to inspire you to keep trying that line your friend challenged you to. 
+          </td>
+        </tr>
+        <tr>
+          <td>Fall</td>
+          <td>In the afternoon or peak of the evening. This is my personal favorite time to skate. I love the fall for it's cool air. It's just cool enough
+            to wear a jacket and maybe take it off as you get warmed up.
+          </td>
+        </tr>
+      </table>
     </section>
 
     <section id="where">
       <h2>Where?</h2>
       <p>
-        Great places to capture amazing photos include national parks, bustling
-        city streets, and quiet coastal areas.
+        Great places to ride in your area. 
       </p>
 
       <figure>
         <img
-          src="city_street_photography.jpg"
-          alt="Street photography in a city"
+          src="https://images.pexels.com/photos/3006223/pexels-photo-3006223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Skatepark"
         />
-        <figcaption>Street photography capturing life in the city.</figcaption>
+        <figcaption>Local Skatepark.</figcaption>
       </figure>
-      <p>
-        <em
-          >Generated prompt: "A vibrant city street at night, long exposure
-          showing car lights and neon signs."</em
-        >
-      </p>
+      <form>
+    <label for="username">Your Name:</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="spot">Spot/Location Name:</label>
+    <input type="text" id="uspot" name="spot" required>
+    
+    <label for="user-comment">Describe this spot. Why Recommend this spot?</label>
+    <textarea id="user-comment" name="user-comment" required></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+
     </section>
 
     <section id="how">
@@ -232,17 +375,25 @@ flex-direction:column-reverse;
 
       <table>
         <tr>
-          <th>Technique</th>
+          <th>Step</th>
           <th>Description</th>
         </tr>
         <tr>
-          <td>Rule of Thirds</td>
+          <td>First</td>
           <td>
-            Dividing your frame into thirds to create balanced compositions.
+            Get comfortable being on the board. Feeling how it is on your feet, and or on your butt. Understand how it moves, try balancing on it. 
           </td>
         </tr>
         <tr>
-          <td>Leading Lines</td>
+          <td>Second</td>
+          <td>Try moving on it, even sitting on it rolling down a hill  .</td>
+        </tr>
+        <tr>
+          <td>Third</td>
+          <td>Using natural lines to guide the viewer’s eyes.</td>
+        </tr>
+        <tr>
+          <td>Fourth and More</td>
           <td>Using natural lines to guide the viewer’s eyes.</td>
         </tr>
       </table>
@@ -283,6 +434,9 @@ flex-direction:column-reverse;
       </p>
     </section>
   </body>
+  <footer>
+    <p>Page Built by <a href="youngdevelopment.org">YoungDevelopment </a>&copy; 2025</p>
+</footer>
   <script>
     document
       .getElementById("validation-button-html")
