@@ -79,71 +79,65 @@
 
     <h3 style="margin: 20px">Employee Data in Complex Table</h3>
     <figure>
-      <figcaption style="text-align:center;">Employee Information</figcaption>
-      <table>
+      <figcaption style="text-align: center">Employee Information</figcaption>
+      <table >
         <tr>
-          <th>Category</th>
-          <th>Name: Last, First</th>
-          <th>Email</th>
-          <th>Years of Service</th>
-          <th>Monthly Salary</th>
+          <th id="category" scope="col">Category</th>
+          <th id="name" scope="col">Name: Last, First</th>
+          <th id="email" scope="col">Email</th>
+          <th id="service" scope="col">Years of Service</th>
+          <th id="salary" scope="col">Monthly Salary</th>
         </tr>
         <tr>
-          <td rowspan="3">Employee</td>
-
-          <td>Porj Kohn</td>
-          <td>PorkCallin@aol.com</td>
-          <td>6</td>
-          <td>$120,000</td>
-
+          <td id="employee" class="rowspan" rowspan="3" >Employee</td>
+          <td headers="category name">Porj Kohn</td>
+          <td headers="category email">PorkCallin@aol.com</td>
+          <td headers="category service">6</td>
+          <td headers="category salary">$120,000</td>
         </tr>
         <tr>
-          <td>Sinarta Frank</td>
-          <td>SingSong@gmail.com</td>
-          <td>3</td>
-          <td>$6,230</td>
-
+          <td headers="category name">Sinarta Frank</td>
+          <td headers="category email">SingSong@gmail.com</td>
+          <td headers="category service">3</td>
+          <td headers="category salary">$6,230</td>
         </tr>
         <tr>
-          <td>Yosha Vegito</td>
-          <td>Yosha@hotmail.com</td>
-          <td>19</td>          <td>$51,400</td>
-
+          <td headers="category name">Yosha Vegito</td>
+          <td headers="category email">Yosha@hotmail.com</td>
+          <td headers="category service">19</td>
+          <td headers="category salary">$51,400</td>
         </tr>
         <tr>
-          <td rowspan="2">Management</td>
-
-          <td>Spend Netta</td>
-          <td>rbafknetta17@hotmail.com</td>
-          <td>17</td>
-          <td>$17,850</td>
+          <td id="Management" class="rowspan" rowspan="2" >Management</td>
+          <td headers="category name">Spend Netta</td>
+          <td headers="category email">rbafknetta17@hotmail.com</td>
+          <td headers="category service">17</td>
+          <td headers="category salary">$17,850</td>
         </tr>
         <tr>
-          <td>Burger Sophia</td>
-          <td>Sburg@outlook.com</td>
-          <td>4</td>
-          <td>$20,850</td>
-
+          <td headers="category name">Burger Sophia</td>
+          <td headers="category email">Sburg@outlook.com</td>
+          <td headers="category service">4</td>
+          <td headers="category salary">$20,850</td>
         </tr>
 
         <tr>
-          <td rowspan="2">Finance Team</td>
-
-          <td>Matthew Ruby</td>
-          <td>MathRub13@msn.com</td>
-          <td>6</td>
-          <td>$12,850</td>
-
+          <td  class="rowspan" rowspan="2" >Finance Team</td>
+          <td headers="category name">Matthew Ruby</td>
+          <td headers=" category email">MathRub13@msn.com</td>
+          <td headers="category service">6</td>
+          <td headers="category salary">$12,850</td>
         </tr>
         <tr>
-          <td>Landon Mikael</td>
-          <td>Michaeljackson@outlook.com</td>
-          <td>2</td>
-          <td>$10,150</td>
+          <td headers="category name">Landon Mikael</td>
+          <td headers="category email">Michaeljackson@outlook.com</td>
+          <td headers="category service">2</td>
+          <td headers="category salary">$10,150</td>
         </tr>
-
-            <td id="bro"colspan="3">Total Annual Salary Budget:</td>
-            <td id="bro"colspan="2">$2,871,960</td>
+        <tr>
+          <th class="bro" colspan="3" scope="row">Total Annual Salary Budget:</th>
+          <td class="bro" colspan="2">$2,871,960</td>
+        </tr>
       </table>
     </figure>
 
