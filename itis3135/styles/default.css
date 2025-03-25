@@ -30,3 +30,27 @@ a:hover{
     color:rgb(48, 27, 4);
     text-decoration:rgb(from color r g b)
 }
+/* table, th, td{
+    border:1px solid black;
+    border-collapse:collapse;
+    margin:20px;
+    padding:5px;
+} */
+table, th{
+    margin:20px;
+    border:1px solid black;
+    padding:auto 5px;
+    border-collapse:collapse;
+}
+td{
+    border:1px solid black;
+    padding:5px;
+
+}
+td[rowspan]{
+font-weight: bold;
+}
+#bro{
+   text-align: center; 
+   font-weight:bold;
+}
