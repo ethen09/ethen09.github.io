@@ -1,0 +1,71 @@
+body {
+  font-size: 1.2 em;
+  color: rgb(0, 0, 0);
+  background-color: #fbe7e0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+header,
+footer,
+main {
+  width: 95%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1,
+h2 {
+  font-size: 1.2em;
+  align-self: center;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+a {
+  color: blueviolet;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(48, 27, 4);
+  text-decoration: rgb(from color r g b);
+}
+/* table, th, td{
+    border:1px solid black;
+    border-collapse:collapse;
+    margin:20px;
+    padding:5px;
+} */
+table,
+th {
+  margin: 20px;
+  border: 1px solid black;
+  padding: 5px 7px;
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+td[rowspan] {
+  font-weight: bold;
+  background-color: #d49bae;
+}
+.bro {
+  text-align: center;
+  font-weight: bold;
+}
+figure table tr:nth-child(odd) td:not(.rowspan):not(.bro) {
+    background-color: #d49bae;
+}
+figure table tr:nth-child(even) td:not(.rowspan):not(.bro) {
+    background-color: #f8bebe;
+}
+figure table tr:first-of-type,
+figure table tr:last-of-type {
+  background-color: #8a4045;
+  color: #ffe7ee;
+}
