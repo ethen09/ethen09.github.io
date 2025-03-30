@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ethen Young Esoteric Yak | ITIS3135 | Forms</title>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/default.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ethen Young Esoteric Yak | ITIS3135</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="contract.html">Contract</a>
+        <a href="tables.html">Tables</a>
+        <a href="forms.html">Forms</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="title">Customer Feedback Form</h2>
+      <p class="title" 
+      style="text-align: left; font-size: 20px; text-decoration: underline;">
+        Contact us!
+      </p>
+
+      <form action="#">
+        <div class="cust-form">
+          <label id="name-label" for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="esoteric yak"
+          />
+        </div><br />
+
+        <div class="cust-form">
+          <label id="email-label" class="required" for="email">Email</label>
+          <input
+            required
+            type="email"
+            id="email"
+            name="email"
+            placeholder="esoteric@yak.com"
+          />
+        </div><br />
+
+        <div class="cust-form">
+          <label>I'm Interested in</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input
+                type="radio"
+                id="shopping"
+                name="interest"
+                value="shopping"
+                required
+              />
+              <label for="shopping">Shopping at the store or online</label>
+            </div>
+            
+            <div class="radio-option">
+              <input type="radio" id="blog" name="interest" value="blog" />
+              <label for="blog">The Blog/Discussion</label>
+            </div>
+            
+            <div class="radio-option">
+              <input type="radio" id="community" name="interest" value="community" />
+              <label for="community">The Community</label>
+            </div>
+            
+            <div class="radio-option">
+              <input type="radio" id="other" name="interest" value="other" />
+              <label for="other">Other:</label>
+              <input type="text" id="other-specify" name="other-specify" size="20"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>What Styles do you prefer?</label>
+          <div class="checkbox-group">
+              <input type="checkbox" id="streetwear" name="styles" value="streetwear">
+              <label for="streetwear">Casual Streetwear</label><br>
+              <input type="checkbox" id="luxury" name="styles" value="luxury">
+              <label for="luxury">Luxury</label><br>
+              <input type="checkbox" id="vintage" name="styles" value="vintage">
+              <label for="vintage">Vintage</label><br>
+              <input type="checkbox" id="avante" name="styles" value="avante">
+              <label for="avante">Avante Garde</label><br>
+              <input type="checkbox" id="formal" name="styles" value="formal">
+              <label for="formal">Formal</label>
+          </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="advertisment"  class="required">How did you hear about us?*</label>
+        <select id="advertisment" name="advertisment" required >
+            <option value="">Select Option</option>
+            <option value="wom">Word of Mouth</option>
+            <option value="instagram">Instagram</option>
+            <option value="twiter">Twitter</option>
+            <option value="tiktok">Tik Tok</option>
+            <option value="Other">Other (Specify Below)</option>
+
+        </select>
+        <label for="other-form">Other:</label>
+         <textarea id="other-form" name="other-form" rows="4" 
+        placeholder="How did you find out about us?">
+      </textarea>               
+        </div><br />
+
+        <div class="form-group">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset Form</button>
+      </div>
+
+      </form>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="https://webpages.charlotte.edu/eyoung37/" target="_blank"
+          >Charlotte Webpages</a
+        >
+        <a href="https://github.com/ethen09" target="_blank">GitHub</a>
+        <a href="https://github.com/ethen09/ethen09.github.io" target="_blank"
+          >GitHub.io</a
+        >
+        <a href="https://www.freecodecamp.org/eyoung" target="_blank"
+          >freeCodeCamp</a
+        >
+        <a href="https://www.codecademy.com/profiles/eyoung37" target="_blank"
+          >Codecademy</a
+        >
+        <a
+          href="https://www.linkedin.com/in/ethen-young-207437270"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </nav>
+      <p>
+        Page Built by <a href="youngdevelopment.org">YoungDevelopment </a>&copy;
+        2025
+      </p>
+      <a href="validation-button-html">
+        <img
+          src="images/htmlValidationButton.png"
+          alt="html validation button"
+        />
+      </a>
+      <a href="validation-button-css">
+        <img src="images/cssValidationButton.png" alt="css validation button" />
+      </a>
+    </footer>
+    <script>
+      document
+        .getElementById("validation-button-html")
+        .setAttribute(
+          "href",
+          "https://validator.w3.org/check?uri=" + location.href
+        );
+      document
+        .getElementById("validation-button-css")
+        .setAttribute(
+          "href",
+          "https://jigaw.w3.org/css-validator/validator?uri=" + location.href
+        );
+    </script>
+    <script>
+function validateForm() {
+  let x = document.forms["email"]["email"].value;
+  if (x === "") {
+    alert("must be filled out");
+    return false;
+  }
+}
+      </script>
+  </body>
+</html>

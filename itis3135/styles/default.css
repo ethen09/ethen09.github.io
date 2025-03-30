@@ -4,7 +4,7 @@ body {
   background-color: #fbe7e0;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -59,13 +59,86 @@ td[rowspan] {
   font-weight: bold;
 }
 figure table tr:nth-child(odd) td:not(.rowspan):not(.bro) {
-    background-color: #d49bae;
+  background-color: #d49bae;
 }
 figure table tr:nth-child(even) td:not(.rowspan):not(.bro) {
-    background-color: #f8bebe;
+  background-color: #f8bebe;
 }
 figure table tr:first-of-type,
 figure table tr:last-of-type {
   background-color: #8a4045;
   color: #ffe7ee;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+/* input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+} */
+ 
+.checkbox-group, .radio-group {
+  margin: 15px 0;
+}
+input[type="text"],
+input[type="email"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  font-weight: normal;
+  display: inline;
+  margin-left: 8px;
+}
+.radio-group {
+  margin: 10px 0;
+}
+.radio-option {
+  margin-bottom: 8px;
+}
+.radio-option label {
+  display: inline;
+  font-weight: normal;
+  margin-left: 5px;
+}
+.required:after {
+  content: " *";
+  color: rgb(255, 55, 0);
+}
+button {
+  background-color: #668a40;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 12px;
+}
+button[type="reset"] {
+  background-color: #701212;
+}
+.title {
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+div{
+  margin-top: 10px;
 }
