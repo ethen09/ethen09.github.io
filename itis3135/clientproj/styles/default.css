@@ -1,0 +1,165 @@
+body {
+  font-size: 1.2 em;
+  color: rgb(0, 0, 0);
+  background-color: #fbe7e0;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1fr auto; 
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  flex: 1;
+  flex-direction: row;
+  margin-left: 250px; 
+}
+header {
+  max-width: 900px;
+  margin: 0 auto;
+}
+footer {
+  grid-column: 2;
+  min-height: 50px;
+  text-align: center; 
+  padding: 1rem;
+  background: #502c2c; 
+  color: white; 
+  margin-top: auto; 
+}
+h1,
+h2 {
+  font-size: 1.2em;
+  align-self: center;
+}
+.navbar {
+  width: 250px;
+  color: rgb(0, 0, 0);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid #34495e;
+  border-top: 1px solid #34495e;
+  border-bottom: 1px solid #34495e;
+}
+.navbar-header {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #34495e;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 12px 20px;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.sidebar-nav a:hover {
+  background: #8a4045;
+  padding-left: 25px;
+}
+a {
+  color: blueviolet;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(48, 27, 4);
+  text-decoration: rgb(from color r g b);
+}
+#home p {
+  margin-bottom: 100px;
+  max-width: 95%;
+  line-height: 24px;
+}
+
+table,
+th {
+  margin: 20px;
+  border: 1px solid black;
+  padding: 5px 7px;
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+td[rowspan] {
+  font-weight: bold;
+  background-color: #d49bae;
+}
+.bro {
+  text-align: center;
+  font-weight: bold;
+}
+figure table tr:nth-child(odd) td:not(.rowspan):not(.bro) {
+  background-color: #d49bae;
+}
+figure table tr:nth-child(even) td:not(.rowspan):not(.bro) {
+  background-color: #f8bebe;
+}
+figure table tr:first-of-type,
+figure table tr:last-of-type {
+  background-color: #8a4045;
+  color: #ffe7ee;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  font-weight: normal;
+  display: inline;
+  margin-left: 8px;
+}
+.radio-group {
+  margin: 10px 0;
+}
+.radio-option {
+  margin-bottom: 8px;
+}
+.radio-option label {
+  display: inline;
+  font-weight: normal;
+  margin-left: 5px;
+}
+.required:after {
+  content: " *";
+  color: rgb(255, 55, 0);
+}
+button {
+  background-color: #668a40;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 12px;
+}
+button[type="reset"] {
+  background-color: #701212;
+}
+.title {
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
