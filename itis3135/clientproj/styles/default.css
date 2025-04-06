@@ -29,6 +29,8 @@ footer {
   background: #502c2c; 
   color: white; 
   margin-top: auto; 
+  margin-left: -250px; /* Counteract sidebar */
+
 }
 h1,
 h2 {
