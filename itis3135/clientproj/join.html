@@ -13,166 +13,61 @@
   <body>
     <header>
       <h1>Game Club |Logo|</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#events">Events</a>
-        <a href="#join">Join</a>
-        <a href="#gallery">Gallery</a>
-      </nav>
+
+      <div class="navbar">
+        <div class="navbar-header">
+          <h2>Game Club</h2>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="join.html">Join</a>
+          <a href="gallery.html">Gallery</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <h2 class="title">GameClub</h2>
+      <h2 class="title">Join</h2>
+      <section><h2 class="banner">Banner</h2></section>
 
       <section id="home">
-        <div id="hero">
-          <h2>Home</h2>
-          <ul>
-            <li>
-              Purpose: The application of this product would be to promote
-              companionship and a welcoming enviorment for gaming hobbyist and
-              like minds.
-            </li>
-            <li>
-              Intended Users: Game Enthusiest, Game professionals, Game
-              competitor, Internet fandoms, Game developers and fans of pop
-              culture. Any one who may be interested in joining the club can get
-              a better idea of how the club operates.
-            </li>
-            <li>
-              Contents: Landing page, about, events, membership form, gallery,
-              and schedule.
-            </li>
-          </ul>
-        </div>
+        <div class="register">
+          <h2>Game Club Sign-Up</h2>
+          <form id="regForm">
+              <div class="form-group">
+                  <label class="required">Full Name</label>
+                  <input type="text" id="name" required>
+              </div>
+              
+              <div class="form-group">
+                  <label class="required">Grade</label>
+                  <select id="grade" required>
+                      <option value="">Select Grade</option>
+                      <option value="9">9th</option>
+                      <option value="10">10th</option>
+                      <option value="11">11th</option>
+                      <option value="12">12th</option>
+                  </select>
+              </div>
+              
+              <div class="form-group">
+                  <label class="required">Email</label>
+                  <input type="email" id="email" required>
+              </div>
+              
+              <div class="form-group">
+                  <label>Student ID</label>
+                  <input type="text" id="studentid">
+              </div>
+              
+              <button type="submit" id="register">Register</button>
+          </form>
+      </div>
       </section>
 
-      <section id="client">
-        <h2>PClient Information</h2>
-        <ul>
-          <li>Name: Olt Rizvanolli</li>
-          <li>Email: orizvano@charlotte.edu</li>
-        </ul>
-      </section>
-
-      <section id="wireframe">
-        <h2>wireframe</h2>
-        <figure>
-          <iframe
-            src="https://drive.google.com/file/d/1VkkV2Dr9m4YzRED60vReE4_lcJXYXYjM/preview"
-            width="640"
-            height="480"
-            allow="autoplay"
-          ></iframe>
-          <figcaption>Home Wireframe</figcaption>
-        </figure>
-      </section>
-
-      <section id="sitemap">
-        <h2>sitemap</h2>
-        <figure>
-          <iframe
-            src="https://drive.google.com/file/d/1YKhwvcXB8KryE2XiDGT4Fwvzsk2nQIAN/preview"
-            width="640"
-            height="480"
-            allow="autoplay"
-          ></iframe>
-
-          <figcaption>Sitemap and navigation planning</figcaption>
-        </figure>
-      </section>
-
-      <section id="design">
-        <h2>Page Design</h2>
-        <ul>
-          <li>
-            Home
-            <p>
-              1. Home <br />
-              2. This page is the landing page; will function to provide quick
-              relevant information for all, establishing the tone of the
-              page.<br />
-              3. Potential and active club members Admin, everyone<br />
-              4. The content of the page will include a Nav, title, logo, news
-              letter, feedback event, and footer. <br />
-              5. This page will not ask <br />6. N/A <br />
-              7. There may be a drop down menu for the Nav, Hyperlinks will be
-              included in the footer, and to other pages <br />
-              8. Feedback event like a Polls will be included and data will be
-              dispalyted to user.
-            </p>
-          </li>
-          <li>
-            About
-            <p>
-              1. About <br />
-              2. This will describe the organization and it's history.<br />
-              3. Everyone<br />
-              4. The content of the page will include a Nav, title, logo,
-              paragraphs explaining, and photos. <br />
-              5. This page will not ask for data <br />6. N/A <br />
-              7.Hyperlinks may lead to gallery or videos outside of website
-              <br />
-              8. N/A
-            </p>
-          </li>
-
-          <li>
-            Event/Sched
-            <p>
-              1. Event/Sched <br />
-              2. This will display a schedule and event description.<br />
-              3. Everyone<br />
-              4. The content of the page will include a Nav, title, logo,
-              Schedule table, Event descriptions, Relevant photos. <br />
-              5. This page will include a feedback/ idea form <br />6. Must be
-              signed in <br />
-              7.Hyperlinks may lead to gallery or videos outside of website. A
-              link COuld lead to a discord server or meeting
-              flyer/organizational promotion graphic
-              <br />
-              8. Form can be submitted for Admin review.
-            </p>
-          </li>
-          <li>
-            Join
-            <p>
-              1. Join <br />
-              2. Display responsibilities and requirements for joining the club officially, Includes sign up form .<br />
-              3. Everyone <br />
-              4. The content of the page will include a Nav, title, logo,
-              SIgn up form , rules/TOS, general contact form <br />
-              5. This page will include a Sign up and contact form, users can enter their personal informations to participate <br />
-              6. Email and student ID <br />
-              7. Submission and reset buttons <br />
-              8. Form can be submitted for Admin review.
-            </p>
-          </li>
-          <li>
-            Gallery
-            <p>
-              1. Gallery <br />
-              2. This will display photos relevant to the game club, including events, members and more.<br />
-              3. Everyone<br />
-              4. The content of the page will include a Nav, title, logo,
-               Relevant photos and vidoese with captions. <br />
-              5. Photo submission form with contact and file sharing<br />
-              6. No <br />
-              7.Submit and reset
-              <br />
-              8. Form can be submitted for Admin review.
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section id="dynamics">
-        <h2>dynamics</h2>
-        <p> Dynamic functionality for this website will include an active countdown to events,
-          Slide show of Gallery, notification and display animation, feedback polls and more.
-
-        </p>
-      </section>
+      
     </main>
     <footer>
       <nav>
