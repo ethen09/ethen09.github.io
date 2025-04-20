@@ -36,23 +36,141 @@
 
       <div class="slider">
         <div class="slides">
-          <img
-            class="slide"
-            src="/itis3135/images/reactionguys.webp"
-            alt="reaction guys cheering"
-          />
-          <img
-            class="slide"
-            src="/itis3135/images/localsmashtourn.jpg "
-            alt="reaction guys cheering"
-          />
-          <img class="slide" src="/itis3135/images/hackathon.webp" alt="img" />
-          <button class="prev" onclick="prevSlide()">&#10094;</button>
-          <button class="next" onclick="nextSlide()">&#10095;</button>
-          <script src="/itis3135/clientproj/scripts/main.js"></script>
-        </div>
-      </div>
+          <div class="mySlides">
+            <div class="numbertext">1 / 10</div>
+            <img
+              class="slide"
+              src="/itis3135/images/earphone.jpg"
+              style="width: 50%"
+              alt="earphones"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">2 / 10</div>
+            <img
+              class="slide"
+              src="/itis3135/images/teaspoon.jpg "
+              style="width: 50%"
+              alt="teaspoon"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">3 / 10</div>
+            <img
+              class="slide"
+              src="/itis3135/images/hairbrush.jpg "
+              style="width: 50%"
+              alt="hairbrush"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">4 / 10</div>
+            <img
+              class="slide"
+              src="/itis3135/images/elasticband.jpg "
+              style="width: 50%"
+              alt="elasticband"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 10</div>
 
+            <img
+              class="slide"
+              src="/itis3135/images/nickle.jpg "
+              style="width: 50%"
+              alt="teaspoon"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">6 / 10</div>
+            <img
+              class="slide"
+              src="/itis3135/images/yogurt.jpg "
+              style="width: 50%"
+              alt="yogurt"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">7 / 10</div>
+            <img
+              class="slide"
+              src="/itis3135/images/orangesyrup.jpg "
+              style="width: 50%"
+              alt="orangesyrup"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">8 / 10</div>
+
+            <img
+              class="slide"
+              src="/itis3135/images/usb.jpg "
+              style="width: 50%"
+              alt="usb"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">9 / 10</div>
+            <img
+              class="slide"
+              src="/itis3135/images/napkin.jpg "
+              style="width: 50%"
+              alt="napkin"
+            />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">10 / 10</div>
+            <img
+              class="slide"
+              src="/itis3135/images/granola.jpg "
+              style="width: 50%"
+              alt="granola"
+            />
+          </div>
+
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="column">
+          <img class="demo cursor" src="/itis3135/images/earphone.jpg" style="width:100%" onclick="currentSlide(1)" alt="Earphones">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/teaspoon.jpg" style="width:100%" onclick="currentSlide(2)" alt="Teaspoon">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/hairbrush.jpg" style="width:100%" onclick="currentSlide(3)" alt="Hairbrush!">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/elasticband.jpg" style="width:100%" onclick="currentSlide(4)" alt="Elasticband">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/nickle.jpg" style="width:100%" onclick="currentSlide(5)" alt="A Nickle">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/yogurt.jpg" style="width:100%" onclick="currentSlide(6)" alt="Yogurt">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/orangesyrup.jpg" style="width:100%" onclick="currentSlide(7)" alt="Orange Simple Syrup">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/usb.jpg" style="width:100%" onclick="currentSlide(8)" alt="USB-C">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/napkin.jpg" style="width:100%" onclick="currentSlide(9)" alt="A Napkin">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="/itis3135/images/granola.jpg" style="width:100%" onclick="currentSlide(10)" alt="Granola Bag">
+        </div>
+        <script src="/itis3135/scripts/slideshow.js"></script>
+
+      </div>
+</div>
       <section id="news">
         <h2>Notes</h2>
         <ul>
@@ -61,17 +179,18 @@
             <ul>
               <li>
                 Sites
-                <p>asdfasdf</p>
+                <p>W3 schools(provided resource),youtube (BroCode)
+                </p>
               </li>
-              
-          <li>
-            People
-            <p>asdfasdf</p>
-          </li>
-          <li>
-            Other
-            <p>asdfasdf</p>
-          </li>
+
+              <li>
+                People
+                <p>N/A</p>
+              </li>
+              <li>
+                Other
+                <p>N/A</p>
+              </li>
             </ul>
           </li>
           <li>
@@ -84,27 +203,27 @@
             </ul>
           </li>
           <li>
-            A statement that this is your work and you did not copy and paste someone else's code
+            A statement that this is your work and you did not copy and paste
+            someone else's code
             <ul>
               <li>
-                Sites
-                <p>ayuttyuityui</p>
+                This is my work! did not copy and paste this code.
+                <p>Confirmed</p>
               </li>
             </ul>
           </li>
           <li>
-            Your signature with the date and time.
-            i.e
+            Your signature with the date and time. i.e
             <ul>
               <li>
-                Sites
-                <p>ayuttyuityui</p>
+                Signed,
+                <p>Ethen Young, 10/19/2020 11:56am</p>
               </li>
             </ul>
           </li>
         </ul>
       </section>
-    </main>
+    </main>     
     <footer>
       <nav>
         <a href="https://webpages.charlotte.edu/eyoung37/" target="_blank"
