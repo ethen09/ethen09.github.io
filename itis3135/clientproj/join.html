@@ -11,25 +11,8 @@
     <link rel="stylesheet" href="styles/default.css" />
   </head>
   <body>
-    <header>
-      <h1>Game Club|</h1>
-      <div class="banner">
-        <img src="/itis3135/images/banner.jpg" alt="club banner" />
-      </div>
+    <header><div data-include="components/header.html"></div></header>
 
-      <div class="navbar">
-        <div class="navbar-header">
-          <h2>Game Club</h2>
-        </div>
-        <nav class="sidebar-nav">
-          <a href="home.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="events.html">Events</a>
-          <a href="join.html">Join</a>
-          <a href="gallery.html">Gallery</a>
-        </nav>
-      </div>
-    </header>
 
     <main>
       <h2 class="title">Join</h2>
@@ -72,39 +55,7 @@
       
     </main>
     <footer>
-      <nav>
-        <a href="https://webpages.charlotte.edu/eyoung37/" target="_blank"
-          >Charlotte Webpages</a
-        >
-        <a href="https://github.com/ethen09" target="_blank">GitHub</a>
-        <a href="https://github.com/ethen09/ethen09.github.io" target="_blank"
-          >GitHub.io</a
-        >
-        <a href="https://www.freecodecamp.org/eyoung" target="_blank"
-          >freeCodeCamp</a
-        >
-        <a href="https://www.codecademy.com/profiles/eyoung37" target="_blank"
-          >Codecademy</a
-        >
-        <a
-          href="https://www.linkedin.com/in/ethen-young-207437270"
-          target="_blank"
-          >LinkedIn</a
-        >
-      </nav>
-      <p>
-        Page Built by <a href="youngdevelopment.org">YoungDevelopment </a>&copy;
-        2025
-      </p>
-      <a href="validation-button-html">
-        <img
-          src="images/htmlValidationButton.png"
-          alt="html validation button"
-        />
-      </a>
-      <a href="validation-button-css">
-        <img src="images/cssValidationButton.png" alt="css validation button" />
-      </a>
+      <div data-include="components/footer.html"></div>
     </footer>
     <script>
       document
@@ -120,5 +71,7 @@
           "https://jigaw.w3.org/css-validator/validator?uri=" + location.href
         );
     </script>
+        <script src="scripts/HTMLInclude.js"></script>
+
   </body>
 </html>
