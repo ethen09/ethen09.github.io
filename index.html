@@ -1,19 +1,340 @@
 <!DOCTYPE html>
-<html lang ="en">
-	<head>
-		<title>Personal Webpage | UNC Charlotte</title>
-	</head>
-	<body>
-			<div id="content-wrapper">
-				<p>Your personal webpage has been created.</p>
-				<a href = "itis3135/">Click to go to ITIS3135 Site</a> 
-				<a href = "itis3135/hobby">Click to go to Hobby Site</a> 
-				<a href = "itis3135/tables.html">Click to go to Tables Site</a> 
-				<a href="itis3135/clientproj/home.html">project</a>
+<html lang="en">
+  <head>
+    <title>Personal Webpage | UNC Charlotte</title>
+    <style>
+      :root {
+        --dark-green: #132a13;
+        --hunter-green: #31572c;
+        --fern-green: #4f772d;
+        --moss-green: #90a955;
+        --mindaro: #ecf39e;
+      }
 
+      /* Base Layout */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: var(--dark-green);
+        color: var(--mindaro);
+        background-image: radial-gradient(
+            circle at 75% 30%,
+            var(--hunter-green) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 25% 70%,
+            var(--fern-green) 0%,
+            transparent 40%
+          );
+      }
 
-				<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+      /* Header Styles */
+      header {
+        width: 100%;
+        background-color: rgba(19, 42, 19, 0.9);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 3px solid var(--moss-green);
+        backdrop-filter: blur(6px);
+      }
 
-			</div>
-	</body>
+      .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .site-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--mindaro);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .site-title span {
+        color: var(--moss-green);
+      }
+
+      .nav-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        max-width: 800px;
+      }
+
+      .nav-container a {
+        display: block;
+        padding: 1rem;
+        background: linear-gradient(
+          90deg,
+          var(--hunter-green) 0%,
+          var(--fern-green) 100%
+        );
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        box-shadow: 0 4px 6px rgba(19, 42, 19, 0.3);
+        z-index: 1;
+      }
+
+      .nav-container a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          var(--fern-green) 0%,
+          var(--moss-green) 100%
+        );
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-container a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(19, 42, 19, 0.4);
+      }
+
+      .nav-container a:hover::before {
+        opacity: 1;
+      }
+
+      .nav-container a:nth-child(1) {
+        background: linear-gradient(
+          90deg,
+          var(--dark-green) 0%,
+          var(--hunter-green) 100%
+        );
+      }
+      .nav-container a:nth-child(2) {
+        background: linear-gradient(
+          90deg,
+          var(--hunter-green) 0%,
+          var(--fern-green) 100%
+        );
+      }
+      .nav-container a:nth-child(3) {
+        background: linear-gradient(
+          90deg,
+          var(--fern-green) 0%,
+          var(--moss-green) 100%
+        );
+      }
+      .nav-container a:nth-child(4) {
+        background: linear-gradient(
+          90deg,
+          var(--moss-green) 0%,
+          var(--mindaro) 100%
+        );
+        color: var(--dark-green);
+      }
+
+      /* Main Content Styles */
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+
+      /* Footer Styles */
+      footer {
+        width: 100%;
+        background-color: var(--dark-green);
+        color: var(--mindaro);
+        padding: 1.5rem 1rem;
+        border-top: 3px solid var(--fern-green);
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      #dynFooter {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      #dynFooter a {
+        color: var(--moss-green);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        padding: 0.3rem 0.5rem;
+        display: inline-block;
+      }
+
+      #dynFooter a:hover {
+        color: var(--mindaro);
+        text-decoration: underline;
+      }
+
+      #dynFooter a[id*="validation-button"] {
+        background-color: var(--hunter-green);
+        color: white !important;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        margin: 0.5rem;
+        text-decoration: none !important;
+      }
+
+      #dynFooter a[id*="validation-button"]:hover {
+        background-color: var(--fern-green);
+        transform: translateY(-2px);
+        text-decoration: none !important;
+      }
+
+      #dynFooter p {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 1rem;
+        }
+        
+        .nav-container {
+          grid-template-columns: 1fr;
+        }
+        
+        #dynFooter {
+          flex-direction: column;
+        }
+        
+        #dynFooter a {
+          display: block;
+          margin: 0.3rem auto;
+        }
+      }
+
+      /* Animation M<anager*/
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-container a {
+        animation: slideIn 0.8s ease-out forwards;
+      }
+
+      .nav-container a:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .nav-container a:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .nav-container a:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .nav-container a:nth-child(4) {
+        animation-delay: 0.4s;
+      }/* FOOTER LINK FIX */
+#dynFooter a,
+#dynFooter a:visited,
+#dynFooter a:link {
+    color: var(--moss-green) !important;
+    text-decoration: none !important;
+}
+
+#dynFooter a:hover {
+    color: var(--mindaro) !important;
+    text-decoration: underline !important;
+}
+
+/* Validation buttons */
+#dynFooter a[id*="validation-button"],
+#dynFooter a[id*="validation-button"]:visited,
+#dynFooter a[id*="validation-button"]:link {
+    background-color: var(--hunter-green) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+#dynFooter a[id*="validation-button"]:hover {
+    background-color: var(--fern-green) !important;
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="googstylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1 class="site-title">Ethen <span>Young</span></h1>
+        <div class="nav-container">
+          <a href="itis3135/">ITIS3135 Site</a>
+          <a href="itis3135/hobby">Hobby Site</a>
+          <a href="itis3135/tables.html">Tables Site</a>
+          <a href="itis3135/clientproj/home.html">Client Project</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Main content area left intentionally empty -->
+    </main>
+
+    <footer>
+      <div id="dynFooter" data-include="components/footer.html"></div>
+    </footer>
+    
+    <script>
+      document
+        .getElementById("validation-button-html")
+        .setAttribute(
+          "href",
+          "https://validator.w3.org/check?uri=" + location.href
+        );
+      document
+        .getElementById("validation-button-css")
+        .setAttribute(
+          "href",
+          "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
+        );
+    </script>
+    <script src="itis3135/scripts/HTMLInclude.js"></script>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

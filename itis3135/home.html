@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ethen Young Esoteric Yak | ITIS3135 | Project Overview</title>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/default.css" />
+  </head>
+  <body>
+    <header>
+      <div id="dynHeader" data-include="components/header.html"></div>
+    </header>
+
+    <main>
+      <h2 class="title">Home</h2>
+      <section id="home">
+        <div id="hero">
+          <h2>Gamers Connect!</h2>
+          <p>
+            Welcome To The Game Club! The spot for competition, community and
+            companionship for gamers and hobbyist alike. No matter your
+            preferance in games, or interest in pop culture, this club is built
+            on a community of welcoming individuals with respect for all the
+            "nerdy" niche interest you can only find in the deepest parts of the
+            interent. You're welcome to come play learn, create and connect with
+            this community in ways you may have never considered being face to
+            face. Bring your enthusiasm and maybe a friend and join the fun!
+            Check out our upcoming community events below and even consider
+            registering as a member. Hope to see you soon!
+          </p>
+        </div>
+      </section>
+
+      <section id="news">
+        <h2>Newsletter</h2>
+        <ul>
+          <li>
+            <strong>April 11th ~ Silent Rave</strong> Bring a friend and a pair
+            of headphones and join us for the silent rave event in the student
+            union! Connect and mingle about your favorite music and related
+            interests Snacks and Drinks included.
+            <a href="./events.html">Click here</a> for more info.
+          </li>
+          <li>
+            <strong>April 26th ~ Smash Bros Tournement</strong> Get in the lab
+            and prepare yourself for our first ever official Smash Bros event!
+            Bring a controller and compete against willing challengers to prove
+            your skill in the arena. <a href="./events.html">Click here</a> for
+            more info.
+          </li>
+          <li>
+            <strong>April 29th ~ Studio Ghibli Night</strong> Studio Ghibli
+            Marathon on us! Bring all your favorite snacks and come down to the
+            Union and watch Studio Ghibli movies with us all night.
+            <a href="./events.html">Click here</a> for more info.
+          </li>
+
+          <li>
+            <strong>May 2nd ~ OOTD Speedrun</strong> We've got a special guest
+            coming down to charlotte to show us her favorite OOTD speedrun
+            route, come join the fun! She will be giving live commentary during
+            their speedrun including trips and tricks.
+            <a href="./events.html">Click here</a> for more info.
+          </li>
+        </ul>
+      </section>
+
+      <section id="event-poll">
+        <div class="poll-container">
+          <h2>Poll: Vote for our upcoming event!</h2>
+          <div class="poll-options">
+              <div class="poll-option">
+                  <input type="radio" id="option1" name="poll" value="tekken">
+                  <label for="option1">Tekken 8 Tournement</label>
+              </div>
+              <div class="poll-option">
+                  <input type="radio" id="option2" name="poll" value="workshop">
+                  <label for="option2">2d platformer workshop</label>
+              </div>
+              <div class="poll-option">
+                  <input type="radio" id="option3" name="poll" value="unity">
+                  <label for="option3">Intro to Unity</label>
+              </div>
+              <div class="poll-option">
+                  <input type="radio" id="option4" name="poll" value="showcase">
+                  <label for="option4">Collection Showcase</label>
+              </div>
+
+          </div>
+          <button id="submit-poll">Submit Vote</button>
+          <div id="poll-results" class="poll-results"></div>
+      </div>
+      </section>
+      <script src="scripts/poll.js"></script>
+
+    </main>
+
+    <footer>
+      <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("validation-button-html")
+        .setAttribute(
+          "href",
+          "https://validator.w3.org/check?uri=" + location.href
+        );
+      document
+        .getElementById("validation-button-css")
+        .setAttribute(
+          "href",
+          "https://jigaw.w3.org/css-validator/validator?uri=" + location.href
+        );
+    </script>
+    <script src="scripts/HTMLInclude.js"></script>
+  </body>
+</html>
