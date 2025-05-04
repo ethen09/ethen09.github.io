@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ethen Young Esoteric Yak | ITIS3135 | Project Overview</title>
-    <script
-      src="https://lint.page/kit/4d0fe3.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Game Club Home | Welcome!</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles/default.css" />
   </head>
-  <body>
+
+  <body class="home-page">
+    <!-- Header section - dynamically included from external file -->
     <header>
       <div id="dynHeader" data-include="components/header.html"></div>
     </header>
 
     <main>
+      <!-- Main page title -->
       <h2 class="title">Home</h2>
+      
+      <!-- Her with welcome message -->
       <section id="home">
         <div id="hero">
           <h2>Gamers Connect!</h2>
@@ -35,9 +38,11 @@
         </div>
       </section>
 
+      <!-- Newsletter/events section -->
       <section id="news">
         <h2>Newsletter</h2>
         <ul>
+          <!--Event listings -->
           <li>
             <strong>April 11th ~ Silent Rave</strong> Bring a friend and a pair
             of headphones and join us for the silent rave event in the student
@@ -58,7 +63,6 @@
             Union and watch Studio Ghibli movies with us all night.
             <a href="./events.html">Click here</a> for more info.
           </li>
-
           <li>
             <strong>May 2nd ~ OOTD Speedrun</strong> We've got a special guest
             coming down to charlotte to show us her favorite OOTD speedrun
@@ -69,54 +73,59 @@
         </ul>
       </section>
 
+      <!-- Interactive poll section -->
       <section id="event-poll">
         <div class="poll-container">
           <h2>Poll: Vote for our upcoming event!</h2>
           <div class="poll-options">
-              <div class="poll-option">
-                  <input type="radio" id="option1" name="poll" value="tekken">
+ 
+            <div class="poll-option">
+                  <input type="radio" id="option1" name="poll" value="Tekken">
                   <label for="option1">Tekken 8 Tournement</label>
               </div>
+
               <div class="poll-option">
-                  <input type="radio" id="option2" name="poll" value="workshop">
+                  <input type="radio" id="option2" name="poll" value="Workshop">
                   <label for="option2">2d platformer workshop</label>
               </div>
+
               <div class="poll-option">
-                  <input type="radio" id="option3" name="poll" value="unity">
+                  <input type="radio" id="option3" name="poll" value="Unity">
                   <label for="option3">Intro to Unity</label>
               </div>
+
               <div class="poll-option">
-                  <input type="radio" id="option4" name="poll" value="showcase">
-                  <label for="option4">Collection Showcase</label>
+                  <input type="radio" id="option4" name="poll" value="Collection Showcase">
+                  <label for="option4">Figurine Collection Showcase</label>
               </div>
-
           </div>
+          <!-- Poll submission button -->
           <button id="submit-poll">Submit Vote</button>
+          <!-- Container for displaying poll results -->
           <div id="poll-results" class="poll-results"></div>
-      </div>
+        </div>
       </section>
+      <!-- Poll functionality script -->
       <script src="scripts/poll.js"></script>
-
     </main>
 
+    <!-- Footer section - dynamically included from external file -->
     <footer>
       <div data-include="components/footer.html"></div>
     </footer>
 
+    <!-- HTML and CSS validation scripts -->
     <script>
-      document
-        .getElementById("validation-button-html")
-        .setAttribute(
+      document.getElementById("validation-button-html").setAttribute(
           "href",
           "https://validator.w3.org/check?uri=" + location.href
-        );
-      document
-        .getElementById("validation-button-css")
-        .setAttribute(
+      );
+      document.getElementById("validation-button-css").setAttribute(
           "href",
           "https://jigaw.w3.org/css-validator/validator?uri=" + location.href
-        );
+      );
     </script>
+    <!-- Script for including header/footer components -->
     <script src="scripts/HTMLInclude.js"></script>
   </body>
 </html>

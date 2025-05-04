@@ -2,48 +2,50 @@
 <html lang="en">
   <head>
     <title>Ethen Young Esoteric Yak | ITIS3135 | Project Overview</title>
-    <script
-      src="https://lint.page/kit/4d0fe3.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- stylesheet -->
     <link rel="stylesheet" href="styles/default.css" />
   </head>
-  <body>
-  
-      <header><div data-include="components/header.html"></div></header>
 
- 
+  <body class="about-page">
+    <!-- header section -dynamically included from external file -->
+    <header>
+      <div data-include="components/header.html"></div>
+    </header>
 
     <main>
+      <!-- Main page title -->
       <h2 class="title">About</h2>
 
+      <!-- Mission Statement Section -->
       <section id="mission">
         <div id="hero">
           <h2>Our Mission</h2>
           <p>
-           We seek to create an inclusive enviorment for students to explore their hobbies,
-           develop skils, and build relationships through collaborative events, competitive play
-           and appreciating niche interests we rarley see outside of the interent. 
+            We seek to create an inclusive environment for students to explore their hobbies,
+            develop skills, and build relationships through collaborative events, competitive play
+            and appreciating niche interests we rarely see outside of the internet. 
           </p>
         </div>
       </section>
 
+      <!-- Activities Section -->
       <section id="feature">
         <h2>What do we do?</h2>
         <ul>
-            <li> Game nights (video, board, and card games)</li>
-            <li> Tournaments with prizes</li>
-            <li> Game Showcases</li>
-            <li> Game jams and Hackathons</li>
-            <li> Social/Networking events</li>
-            <li> Beginner-friendly workshops </li>
-            <li> Mentor workshops</li>
-
+            <li>Game nights (video, board, and card games)</li>
+            <li>Tournaments with prizes</li>
+            <li>Game Showcases</li>
+            <li>Game jams and Hackathons</li>
+            <li>Social/Networking events</li>
+            <li>Beginner-friendly workshops</li>
+            <li>Mentor workshops</li>
         </ul>
       </section>
 
+      <!--Club Rules Section -->
       <section id="rules">
         <h2>Club Rules</h2>
         <ol>
@@ -56,22 +58,30 @@
         </ol>
       </section>
 
+      <!--FAQ Section with expandable details -->
       <section id="faq">
         <h2>FAQ</h2>
+        <!--FAQ Item 1 -->
         <details>
           <summary>Can I participate without joining the club?</summary>
           <p>Yes! Participation is welcome but unless you are a member you have
             limited access within the club. Members can vote, organize and discuss events. 
-          Become a member today! <a href="join.html"> Join!</a></p>
-      </details>
+            Become a member today! <a href="join.html">Join!</a></p>
+        </details>
+        
+        <!-- FAQ Item 2 -->
         <details>
           <summary>What are the requirements to join?</summary>
           <p>A student ID and your passion.</p>
-      </details>
+        </details>
+        
+        <!--FAQ Item 3 -->
         <details>
             <summary>Do I need experience to join?</summary>
             <p>No! All skill levels are welcome. Just be a good sport.</p>
         </details>
+        
+        <!--FAQ Item 4 -->
         <details>
             <summary>What games do you play?</summary>
             <p>Video games, board games, card games you name it! You can even submit
@@ -80,67 +90,73 @@
         </details>
       </section>
 
-      
+      <!-- Contact Form Section -->
       <section id="event-form">
         <h2 class="form-title">Contact Us</h2>
-            <form id="contact-form">
-              <div class="form-group">
-                <label class="required">Full Name</label>
-                <input type="text" id="name" placeholder="Last, First" required>
-            </div>
-            <div class="form-group">
-              <label  class="required" for="emailInfo">Your Email </label>
-              <input  type="email" id="emailInfo" name="emailInfo" placeholder="email@example.com" required>
-            </div>
-
-              <div class="form-group">
-                <label  for="phoneInfo">Your Phone Number (optional) </label>
-                <input  type="number" id="phoneInfo" name="phoneInfo" placeholder="212-323-4545">
+        <form id="contact-form">
+          <!-- Name Input -->
+          <div class="form-group">
+            <label class="required">Full Name</label>
+            <input type="text" id="name" placeholder="Last, First" required>
           </div>
-                <div class="form-group">
-                    <label class="required" for="queryType">Topic</label>
-                    <select  id="queryType" name="queryType" required>
-                        <option value="">Select an option</option>
-                        <option value="question">Question</option>
-                        <option value="concern">Concern</option>
-                        <option value="comment">Comment</option>
-                        <option value="suggestion">Suggestion</option>
-                        <option value="other">Other</option>
+          
+          <!-- Email Input -->
+          <div class="form-group">
+            <label class="required" for="emailInfo">Your Email</label>
+            <input type="email" id="emailInfo" name="emailInfo" placeholder="email@example.com" required>
+          </div>
 
-                    </select>
-                </div>
+          <!-- Phone Input (Optional) -->
+          <div class="form-group">
+            <label for="phoneInfo">Your Phone Number (optional)</label>
+            <input type="number" id="phoneInfo" name="phoneInfo" placeholder="212-323-4545">
+          </div>
+          
+          <!-- Topic Selection -->
+          <div class="form-group">
+            <label class="required" for="queryType">Topic</label>
+            <select id="queryType" name="queryType" required>
+                <option value="">Select an option</option>
+                <option value="question">Question</option>
+                <option value="concern">Concern</option>
+                <option value="comment">Comment</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="other">Other</option>
+            </select>
+          </div>
 
+          <!-- Message Textarea -->
+          <div class="form-group">
+            <label class="required" for="description">Message</label>
+            <textarea style="border-radius:7px; height:200px; width:600px;" 
+                     id="description" name="description" required 
+                     placeholder="Message"></textarea>
+          </div>
 
-                <div class="form-group">
-                    <label class="required"  for="description">Message</label>
-                    <textarea style="border-radius:7px; height:200px; width:600px;" id="description" name="description" required placeholder="Message"> </textarea>
-                </div>
-
-
-
-                <button type="submit" class="submit-bttn">Submit Idea</button>
-            </form>
+          <!-- Submit Button -->
+          <button type="submit" class="submit-bttn">Submit Idea</button>
+        </form>
       </section>
     </main>
+
+    <!-- Footer section - dynamically included from external file -->
     <footer>
       <div data-include="components/footer.html"></div>
-
     </footer>
+
+    <!-- HTML and CSS validation scripts -->
     <script>
-      document
-        .getElementById("validation-button-html")
-        .setAttribute(
+      document.getElementById("validation-button-html").setAttribute(
           "href",
           "https://validator.w3.org/check?uri=" + location.href
-        );
-      document
-        .getElementById("validation-button-css")
-        .setAttribute(
+      );
+      document.getElementById("validation-button-css").setAttribute(
           "href",
           "https://jigaw.w3.org/css-validator/validator?uri=" + location.href
-        );
+      );
     </script>
-        <script src="scripts/HTMLInclude.js"></script>
-
+    
+    <!-- Script for including header/footer components -->
+    <script src="scripts/HTMLInclude.js"></script>
   </body>
 </html>

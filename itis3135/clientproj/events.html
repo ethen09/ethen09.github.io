@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ethen Young Esoteric Yak | ITIS3135 | Project Overview</title>
-    <script
-      src="https://lint.page/kit/4d0fe3.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Game Club Schedule | Events Calendar</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/default.css" />
   </head>
+
   <body>
+    <!-- Header loaded from external component -->
     <header>
       <div data-include="components/header.html"></div>
-
     </header>
 
     <main>
       <h2 class="title">Schedule</h2>
 
-      <section id="home">
+      <!-- Calendar Section -->
+      <section id="calendar">
+        <!-- Image Divider -->
+        <img src="../images/frogSection.png" alt="Gaming Calendar" style="height:10%; width: 10%;" class="calendar-img">
+
         <div id="hero">
-          <h2>Google Calender Schedule</h2>
+          <h2>Google Calendar Schedule</h2>
           <p>
-          Below you will find our interactive google calender. You can save the google calender
-          to your google account to make sure you stay up to date with all the latest events. 
+            Interactive calendar of upcoming events. Save to your Google account
+            to stay updated.
           </p>
+
+          <!-- Embedded Google Calendar -->
           <iframe
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&src=NTEzNTA1MjI1NTg2YzcxNTgwN2ZjNTRjMWVjOTVhZjdlMzA0ZjM0NTNkMTBmYzkyYTk4NDY5OGM2YzFkZmY2YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZDVkOGw2MjM3Z2xzYWU5Y3JxaTF0MjBwaW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y2hhcmxvdHRlQGljb2Rlc2Nob29sLmNvbQ&color=%238E24AA&color=%239E69AF&color=%23795548"
             style="border: solid 1px #777"
@@ -35,56 +38,81 @@
         </div>
       </section>
 
+      <!-- Event Suggestion Form -->
       <section id="event-form">
+        <img src="../images/frogSection.png" alt="Gaming Calendar" style="height:10%; width: 10%;" class="calendar-img">
+
         <h2 class="form-title">Suggest an Event Idea</h2>
-            <form id="eventSuggestionForm">
-                <div class="form-group">
-                    <label class="reqform" for="eventName">Event Name</label>
-                    <input type="text" id="eventName" name="eventName" required>
-                </div>
+        <form id="eventSuggestionForm">
+          <!--   Event Name -->
+          <div class="form-group">
+            <label class="reqform" for="eventName">Event Name</label>
+            <input type="text" id="eventName" name="eventName" required />
+          </div>
 
-                <div class="form-group">
-                    <label for="eventType">Event Type</label>
-                    <select id="eventType" name="eventType" required>
-                        <option value="">Select an option</option>
-                        <option value="tournament">Tournament</option>
-                        <option value="casual">Casual Play</option>
-                        <option value="workshop">Workshop</option>
-                        <option value="social">Social Event</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+          <!-- Event Type Dropdown -->
+          <div class="form-group">
+            <label for="eventType">Event Type</label>
+            <select id="eventType" name="eventType" required>
+              <option value="">Select an option</option>
+              <option value="tournament">Tournament</option>
+              <option value="casual">Casual Play</option>
+              <option value="workshop">Workshop</option>
+              <option value="social">Social Event</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label  for="preferredDate">Preferred Date (optional)</label>
-                    <input type="date" id="preferredDate" name="preferredDate">
-                </div>
+          <!-- Date Picker -->
+          <div class="form-group">
+            <label for="preferredDate">Preferred Date (optional)</label>
+            <input type="date" id="preferredDate" name="preferredDate" />
+          </div>
 
-                <div class="form-group">
-                    <label class="reqform" for="gameSelection">Game(s) to Feature (optional)</label>
-                    <input type="text" id="gameSelection" name="gameSelection" placeholder="e.g., Mario Kart 64, Chess, Tekken 8">
-                </div>
+          <!-- Game Selection -->
+          <div class="form-group">
+            <label for="gameSelection">Game(s) to Feature (optional)</label>
+            <input
+              type="text"
+              id="gameSelection"
+              name="gameSelection"
+              placeholder="e.g., Mario Kart 64, Chess, Tekken 8"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label class="reqform" for="description">Event Description</label>
-                    <textarea id="description" name="description" required placeholder="Tell us about your idea..."></textarea>
-                </div>
+          <!-- Description Textarea -->
+          <div class="form-group">
+            <label class="reqform" for="description">Event Description</label>
+            <textarea
+              id="description"
+              name="description"
+              required
+              placeholder="Tell us about your idea..."
+            ></textarea>
+          </div>
 
-                <div class="form-group">
-                    <label class="reqform" for="contactInfo">Your Email </label>
-                    <input type="text" id="contactInfo" name="contactInfo" placeholder="email@example.com">
-                </div>
+          <!-- Contact Information -->
+          <div class="form-group">
+            <label class="reqform" for="contactInfo">Your Email</label>
+            <input
+              type="text"
+              id="contactInfo"
+              name="contactInfo"
+              placeholder="email@example.com"
+            />
+          </div>
 
-                <button type="submit" class="submit-bttn">Submit Idea</button>
-            </form>
+          <!-- Submit Button -->
+          <button type="submit" class="submit-bttn">Submit Idea</button>
+        </form>
       </section>
-
-     
     </main>
+    <!-- Footer section - dynamically included from external file -->
     <footer>
       <div data-include="components/footer.html"></div>
-
     </footer>
+
+    <!-- HTML and CSS validation scripts -->
     <script>
       document
         .getElementById("validation-button-html")
@@ -99,7 +127,7 @@
           "https://jigaw.w3.org/css-validator/validator?uri=" + location.href
         );
     </script>
-        <script src="scripts/HTMLInclude.js"></script>
-
+    <!-- Script for including header/footer components -->
+    <script src="scripts/HTMLInclude.js"></script>
   </body>
 </html>

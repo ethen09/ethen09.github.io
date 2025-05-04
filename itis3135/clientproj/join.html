@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ethen Young Esoteric Yak | ITIS3135 | Project Overview</title>
+    <title>Game Club Sign-Up | Join Today</title>
     <script
       src="https://lint.page/kit/4d0fe3.js"
       crossorigin="anonymous"
@@ -17,7 +17,7 @@
     <main>
       <h2 class="title">Join</h2>
 
-      <section id="home">
+      <section id="join">
         <div class="register">
           <h2>Game Club Sign-Up</h2>
           <form id="regForm">
@@ -27,13 +27,13 @@
               </div>
               
               <div class="form-group">
-                  <label class="required">Grade</label>
+                  <label class="required">Year of study</label>
                   <select id="grade" required>
-                      <option value="">Select Grade</option>
-                      <option value="9">9th</option>
-                      <option value="10">10th</option>
-                      <option value="11">11th</option>
-                      <option value="12">12th</option>
+                      <option value="">Select Year</option>
+                      <option value="freshman">Freshman</option>
+                      <option value="sophore">Sophmore</option>
+                      <option value="junior">Junior</option>
+                      <option value="senior">Senior</option>
                   </select>
               </div>
               
@@ -49,6 +49,11 @@
               
               <button type="submit" id="register">Register</button>
           </form>
+          <div id="success-message" style="display: none;">
+            <img src="../images/youreWinner.jpg" alt="successful submission" class="success-image">
+            <h3>Welcome to the Game Club!</h3>
+            <p>Your registration was successful. We'll email you soon with details.</p>
+          </div>
       </div>
       </section>
 
@@ -72,6 +77,7 @@
         );
     </script>
         <script src="scripts/HTMLInclude.js"></script>
+        <script src="scripts/submission.js"></script>
 
   </body>
 </html>

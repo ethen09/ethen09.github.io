@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // First, define all functions
+    // displays results 
     function displayResults(data) {
         const pollResults = document.getElementById('poll-results');
-        let resultsHTML = '<h3>Poll Results</h3>';
+        let resultsHTML = `<h3>Poll Results (Total Votes: ${data.totalVotes})</h3>`;
         
         for (const [option, votes] of Object.entries(data)) {
-            if (option !== 'totalVotes') {  // Fixed typo here (was 'totalVotes')
-                const percentage = data.totalVotes > 0 ? Math.round((votes / data.totalVotes) * 100) : 0;
+            if (option !== 'totalVotes') { 
+                const percentage = data.totalVotes > 0 ? (votes / data.totalVotes) * 100 : 0;
+                const roundedPercentage = Math.round(percentage * 10) / 10; // Round to 1 decimal place
+                
                 resultsHTML += `
                     <div class="result-item">
-                        <span>${option}: ${votes} votes (${percentage}%)</span>
+                        <span>${option}: ${votes} votes (${roundedPercentage}%)</span>
                         <div class="result-bar">
-                            <div class="result-fill" style="width: ${percentage}%">${percentage}%</div>
+                            <div class="result-fill" style="width: ${percentage}%">${roundedPercentage}%</div>
                         </div>
                     </div>
                 `;
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         pollResults.innerHTML = resultsHTML;
         pollResults.style.display = 'block';
         
-        // Disable voting controls
+        // disables voting controls after submission
         document.querySelectorAll('input[name="poll"]').forEach((radio) => {
             radio.disabled = true;
         });
@@ -30,23 +32,21 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.textContent = 'Vote Submitted';
         submitBtn.style.backgroundColor = '#cccccc';
     }
-
+    //initializes poll data 
     function initializePollData() {
         if (!localStorage.getItem('pollData')) {
             const initialData = {
-                "JavaScript": 0,
-                "Python": 0,
-                "Java": 0,
-                "C++": 0,
-                "Other": 0,
-                "totalVotes": 0  // Fixed typo here (consistent naming)
+                "Tekken": 1,
+                "Workshop": 0,
+                "Unity": 0,
+                "Collection Showcase": 0,
+                "totalVotes": 1
             };
             localStorage.setItem('pollData', JSON.stringify(initialData));
         }
         return JSON.parse(localStorage.getItem('pollData'));
     }
 
-    // Main execution flow
     const pollData = initializePollData();
     const submitBtn = document.getElementById('submit-poll');
 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Update poll data
+        //updating poll
         pollData[selectedOption.value]++;
         pollData.totalVotes++;
         localStorage.setItem('pollData', JSON.stringify(pollData));
@@ -67,8 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
         displayResults(pollData);
     });
 
-    // Check for existing vote
+    //Check for existing vote
     if (localStorage.getItem('hasVoted')) {
         displayResults(pollData);
     }
 });
+//dev console reset
+// localStorage.removeItem('pollData');
+// localStorage.removeItem('hasVoted');
+// location.reload(); 

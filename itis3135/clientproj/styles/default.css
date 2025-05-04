@@ -1,3 +1,57 @@
+/* Home page hero section styles */
+.home-page #hero
+{
+  background: url('/itis3135/images/gamingBanner.jpg') center/cover no-repeat;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  
+}
+/* Text overlay for hero section */
+.home-page #hero p {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* About page hero section with dark overlay */
+.about-page #hero
+{background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+  url('/itis3135/images/gameClubAbout.jpeg') center/cover no-repeat;
+  height: 300px;
+  padding: 20px;
+padding: 100px 20px;
+color: #fefee3; /* Light cream text color */
+text-align: center;
+border-radius: 10px;
+margin: 20px 0;
+  
+}
+/* Mission statement box styling */
+#mission p {
+  background-color: #fefee3e4; /* Semi-transparent cream background */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: #495057; 
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Base heading styles */
+h1,
+h2 {
+  font-size: 1.2em;
+  align-self: center;
+}
+
+/* Poll container styling */
 .poll-container {
   max-width: 500px;
   margin: 20px auto;
@@ -8,15 +62,12 @@
   font-family: Arial, sans-serif;
 }
 
-.poll-container h2 {
-  margin-top: 0;
-  color: #333;
-}
-
+/* Poll option styling */
 .poll-options {
   margin: 20px 0;
 }
 
+/* Individual poll option styling */
 .poll-option {
   margin: 10px 0;
   padding: 10px;
@@ -25,16 +76,19 @@
   transition: background-color 0.3s;
 }
 
+/* Poll option hover effect */
 .poll-option:hover {
   background-color: #f0f0f0;
 }
 
+/* Poll radio button spacing */
 .poll-option input[type="radio"] {
   margin-right: 10px;
 }
 
+/* Poll submit button */
 #submit-poll {
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Green color */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -43,10 +97,12 @@
   font-size: 16px;
 }
 
+/* Poll submit button hover state */
 #submit-poll:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Darker green */
 }
 
+/* Poll results container */
 .poll-results {
   margin-top: 20px;
   padding: 15px;
@@ -55,10 +111,7 @@
   display: none;
 }
 
-.poll-results h3 {
-  margin-top: 0;
-}
-
+/* Result bar styling */
 .result-bar {
   height: 20px;
   background-color: #e0e0e0;
@@ -67,25 +120,31 @@
   overflow: hidden;
 }
 
+/* Filled portion of result bar */
 .result-fill {
   height: 100%;
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Green color */
   border-radius: 10px;
   transition: width 0.5s;
   text-align: center;
   color: white;
   font-size: 12px;
   line-height: 20px;
-}body {
+}
+
+/* Base body styling */
+body {
   font-size: 1.2 em;
   color: rgb(0, 0, 0);
-  background-color: #FEFEE3;
+  background-color: #FEFEE3; /* Cream background */
   display: grid;
   grid-template-columns: 250px 1fr;
   grid-template-rows: 1fr auto; 
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
 }
+
+/* Main content area styling */
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -93,38 +152,41 @@ main {
   padding: 20px;
   flex: 1;
   flex-direction: row;
-  margin-left: 250px; 
+  margin-left: 250px; /* Account for sidebar */
 }
+
+/* Header container */
 header {
   max-width: 900px;
   margin: 0 auto;
 }
+
+/* Footer styling */
 footer {
   grid-column: 2;
   min-height: 50px;
   text-align: center; 
   padding: 1rem;
-  background: #FFC9B9; 
+  background: #FFC9B9; /* Peach color */
   color: white; 
   margin-top: auto; 
-  margin-left: -250px; 
-
+  margin-left: -250px; /* Alignment adjustment */
 }
+
+/* Banner image container */
 .banner {
   width: 100%;
   overflow: hidden; 
 }
 
+/* Banner image styling */
 .banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-h1,
-h2 {
-  font-size: 1.2em;
-  align-self: center;
-}
+
+/* Navigation sidebar styling */
 .navbar {
   width: 250px;
   color: rgb(0, 0, 0);
@@ -135,11 +197,14 @@ h2 {
   border-top: 1px solid #2C6E49;
   border-bottom: 1px solid #2C6E49;
 }
+
+/* Navbar header section */
 .navbar-header {
   padding: 0 20px 20px;
   border-bottom: 1px solid #2C6E49;
 }
 
+/* Navigation links */
 .sidebar-nav a {
   display: block;
   padding: 12px 20px;
@@ -147,36 +212,47 @@ h2 {
   text-decoration: none;
   transition: all 0.3s;
 }
+
+/* Nav link hover state */
 .sidebar-nav a:hover {
   background: #FFC9B9;
   padding-left: 25px;
 }
+
+/* General link styling */
 a {
   font-size:large;
   color: #2C6E49;
   text-decoration: none;
 }
+
+/* Link hover state */
 a:hover {
   color: rgb(48, 27, 4);
   text-decoration: rgb(from color r g b);
 }
+
+/* Home page paragraph styling */
 #home p {
   margin-bottom: 50px;
   max-width: 95%;
   line-height: 24px;
 }
+
+/* Required form field indicator */
  label[required]::after {
   content: " *";
   color: #e74c3c;
   font-size: 1.1em;
 }
 
+/* FAQ section heading */
 .faq h2{
   color: #fff;
   text-align: center;
 }
 
-
+/* FAQ dropdown styling */
 details{
   background-color: #4C956C;
   color: #ffffdb;
@@ -188,20 +264,20 @@ details{
 details a{
   color:#f98db1;
 }
+
+/* FAQ summary element */
 summary {
   justify-content: space-between;  
   transition: height 1s ease;  padding: 10px;
-
 }
 
-
+/* Open FAQ item styling */
 details[open] summary {
     border-bottom: 1px solid #aaa;
     margin-bottom: .5em;
-
 }
 
-
+/* Table styling */
 table,
 th {
   margin: 20px;
@@ -209,50 +285,67 @@ th {
   padding: 5px 7px;
   border-collapse: collapse;
 }
+
+/* Table cell styling */
 td {
   border: 1px solid black;
   padding: 5px;
 }
+
+/* Rowspan cell styling */
 td[rowspan] {
   font-weight: bold;
   background-color: #d49bae;
 }
+
+/* Special table header class */
 .bro {
   text-align: center;
   font-weight: bold;
 }
+
+/* Zebra striping for table rows */
 figure table tr:nth-child(odd) td:not(.rowspan):not(.bro) {
   background-color: #d49bae;
 }
 figure table tr:nth-child(even) td:not(.rowspan):not(.bro) {
   background-color: #f8bebe;
 }
+
+/* First and last table row styling */
 figure table tr:first-of-type,
 figure table tr:last-of-type {
   background-color: #8a4045;
   color: #ffe7ee;
 }
 
+/* Form label styling */
 label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
 }
+
+/* Image slider container */
 .slider{
   position:relative;
   width:100%;
   margin:auto;
   overflow:hidden;
 }
+
+/* Slider image base state */
 .slider img{
   width:100%;
   display:none;
 }
 
+/* Active slide styling */
 img.displaySlide{
   display: block;
 }
 
+/* Slider navigation buttons */
 .slider button{
   position:absolute;
   top:50%;
@@ -264,17 +357,24 @@ img.displaySlide{
   border:none;
   cursor:pointer;
 }
+
+/* Previous button positioning */
 .previous{
   left:0;
 }
+
+/* Next button positioning */
 .next{
   right:0;
 }
 
+/* Slide transition animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
+/* Form input styling */
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
@@ -283,31 +383,44 @@ input[type="email"] {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+/* Form group spacing */
 .form-group {
   margin-bottom: 20px;
 }
 
+/* Checkbox and radio label styling */
 .checkbox-group label,
 .radio-group label {
   font-weight: normal;
   display: inline;
   margin-left: 8px;
 }
+
+/* Radio group container */
 .radio-group {
   margin: 10px 0;
 }
+
+/* Individual radio option */
 .radio-option {
   margin-bottom: 8px;
 }
+
+/* Radio option label */
 .radio-option label {
   display: inline;
   font-weight: normal;
   margin-left: 5px;
 }
+
+/* Required form field indicator */
 .reqform:after {
   content: " *";
   color: rgb(255, 55, 0);
 }
+
+/* Base button styling */
 button {
   background-color: #668a40;
   color: white;
@@ -318,11 +431,42 @@ button {
   margin-right: 15px;
   font-size: 12px;
 }
+
+/* Reset button styling */
 button[type="reset"] {
   background-color: #701212;
 }
+
+/* Page title styling */
 .title {
   color: black;
   margin-bottom: 20px;
   text-align: center;
+}
+
+/* Success message styling */
+#success-message {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Success icon styling */
+.success-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hidden form after submission */
+.form-submitted #regForm {
+  display: none;
 }

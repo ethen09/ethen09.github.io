@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ethen Young Esoteric Yak | ITIS3135 | Project Overview</title>
-    <script
-      src="https://lint.page/kit/4d0fe3.js"
-      crossorigin="anonymous"
-    ></script>
-   
+    <title>Game Club Gallery | Event Photos</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- stylesheet -->
     <link rel="stylesheet" href="styles/default.css" />
   </head>
+
   <body>
+    <!-- Header section - loaded from external component -->
     <header>
-      <div data-include="components/header.html"></div></header>
+      <div data-include="components/header.html"></div>
+    </header>
 
     <main>
       <h2 class="title">Gallery</h2>
 
-        <div class="slider">
-          <div class="slides">
-            <img
-              class="slide"
-              src="../images/reactionguys.webp"
-              alt="reaction guys cheering"
-            />
-            <img
-            class="slide"
-            src="../images/localsmashtourn.jpg "
-            alt="reaction guys cheering"
-          />
-          <img
-          class="slide"
-          src="../images/hackathon.webp"
-          alt="img"
-        />
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
-        <script src= "scripts/main.js"></script>
-          </div>
+      <!-- Image Slider Container -->
+      <div class="slider">
+        <div class="slides">
+          <!-- Slide 1: Event reaction photo -->
+          <img class="slide" 
+               src="../images/reactionguys.webp" 
+               alt="Club members cheering at an event">
+          
+          <!--Tournament photo -->
+          <img class="slide"
+               src="../images/localsmashtourn.jpg"
+               alt="Local Smash Bros tournament competition">
+          
+          <!-- Slide 3: Hackathon photo -->
+          <img class="slide"
+               src="../images/hackathon.webp"
+               alt="Game development hackathon session">
+          
+          <!-- Navigation Buttons -->
+          <button class="prev" onclick="prevSlide()" aria-label="Previous image">&#10094;</button>
+          <button class="next" onclick="nextSlide()" aria-label="Next image">&#10095;</button>
         </div>
- 
-
-     
+      </div>
+      
+      <!-- Slideshow script -->
+      <script src="scripts/main.js"></script>
     </main>
+
+    <!-- Footer section - loaded from external component -->
     <footer>
       <div data-include="components/footer.html"></div>
     </footer>
-    <script>
-      document
-        .getElementById("validation-button-html")
-        .setAttribute(
-          "href",
-          "https://validator.w3.org/check?uri=" + location.href
-        );
-      document
-        .getElementById("validation-button-css")
-        .setAttribute(
-          "href",
-          "https://jigaw.w3.org/css-validator/validator?uri=" + location.href
-        );
-    </script>
-    <script src="scripts/HTMLInclude.js"></script>
 
+    <!-- Validation scripts -->
+    <script>
+      document.getElementById("validation-button-html").setAttribute(
+          "href", "https://validator.w3.org/check?uri=" + location.href);
+      document.getElementById("validation-button-css").setAttribute(
+          "href", "https://jigaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    
+    <!-- Header/Footer inclusion script -->
+    <script src="scripts/HTMLInclude.js"></script>
   </body>
 </html>
