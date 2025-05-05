@@ -173,6 +173,10 @@ footer {
   margin-left: -250px; /* Alignment adjustment */
 }
 
+/* Footer nav styling */
+footer nav{
+  padding:10px;
+}
 /* Banner image container */
 .banner {
   width: 100%;
