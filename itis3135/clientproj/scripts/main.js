@@ -26,7 +26,7 @@
 //   slides[slideIndex-1].style.display = "block";
 //   dots[slideIndex-1].className += " active";
 // }
-
+//https://www.youtube.com/watch?v=749ta0nvj8s
 /**
  * GAME CLUB GALLERY SLIDER
  * Controls the automatic and manual navigation of event photos
