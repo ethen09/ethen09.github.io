@@ -1,7 +1,7 @@
 /* Home page hero section styles */
 .home-page #hero
 {
-  background: url('../images/gamingBanner.jpg') center/cover no-repeat;
+  background: url('/itis3135/images/gamingBanner.jpg') center/cover no-repeat;
   height: 300px;
   padding: 20px;
   display: flex;
