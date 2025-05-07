@@ -152,6 +152,7 @@ main {
   padding: 20px;
   flex: 1;
   flex-direction: row;
+  overflow-x: hidden;
   margin-left: 250px; /* Account for sidebar */
 }
 
@@ -473,4 +474,118 @@ button[type="reset"] {
 /* Hidden form after submission */
 .form-submitted #regForm {
   display: none;
+}
+
+/* Mobile (370px - 600px) */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+  /* Structural changes */
+  body {
+    grid-template-columns: 1fr; /* Single column layout */
+    font-size: 1em; /* Slightly smaller base font */
+  }
+  
+  main {
+    margin-left: 0; /* Remove sidebar offset */
+    padding: 15px; /* Reduced padding */
+    width: 95%; /* More edge space */
+  }
+  
+  .navbar {
+    width: 100%; /* Full width navbar */
+    position: static; /* Remove sticky */
+    border-right: none;
+    padding: 10px 0;
+  }
+  
+  footer {
+    grid-column: 1; /* Full width footer */
+    margin-left: 0;
+  }
+  
+  /* Hero sections */
+  .home-page #hero,
+  .about-page #hero {
+    height: 200px; /* Shorter hero */
+    padding: 10px; /* Less padding */
+  }
+  
+  /* Mission statement */
+  #mission p {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Poll container */
+  .poll-container {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  /* FAQ adjustments */
+  details {
+    font-size: 1rem;
+  }
+  
+  /* Table adjustments */
+  table, th, td {
+    margin: 5px;
+    padding: 3px;
+  }
+}
+
+/* Tablet (601px - 980px) */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+  /* Structural changes */
+  body {
+    grid-template-columns: 200px 1fr; /* Narrower sidebar */
+  }
+  
+  main {
+    margin-left: 200px; /* Adjusted for narrower sidebar */
+    padding: 15px;
+  }
+  
+  .navbar {
+    width: 200px; /* Narrower sidebar */
+  }
+  
+  footer {
+    margin-left: -200px; /* Adjusted for narrower sidebar */
+  }
+  
+  /* Hero sections */
+  .home-page #hero,
+  .about-page #hero {
+    height: 250px;
+  }
+  
+  /* Mission statement */
+  #mission p {
+    max-width: 90%;
+  }
+  
+  /* Poll container */
+  .poll-container {
+    max-width: 90%;
+  }
+  
+
+}
+
+
+/* Special cases for very small screens */
+@media screen and (max-width: 369px) {
+  /* Extreme mobile adjustments */
+  body {
+    font-size: 0.9em;
+  }
+  
+  .home-page #hero p,
+  .about-page #hero {
+    padding: 5px;
+  }
+  
+  .poll-option {
+    padding: 5px;
+  }
 }
