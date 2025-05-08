@@ -1,7 +1,7 @@
 /* Home page hero section styles */
 .home-page #hero
 {
-  background: url('/itis3135/images/gamingBanner.jpg') center/cover no-repeat;
+  background: url('../images/gamingBanner.jpg') center/cover no-repeat;
   height: 300px;
   padding: 20px;
   display: flex;
@@ -19,7 +19,6 @@
   padding: 20px;
   border-radius: 10px;
 }
-
 /* About page hero section with dark overlay */
 .about-page #hero
 {background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 

@@ -12,7 +12,7 @@ header,
 footer,
 main {
   width: 95%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 h1,
@@ -142,4 +142,101 @@ button[type="reset"] {
 
 div{
   margin-top: 10px;
+}
+/* tablets and small (768px and below) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 15px;
+    font-size: 1em;
+  }
+
+  header, footer, main {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+    display: block;
+  }
+
+  table, th, td {
+    margin: 10px 0;
+    padding: 3px 5px;
+    font-size: 0.9em;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    font-size: 11px;
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  h1, h2 {
+    font-size: 1.1em;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .checkbox-group, 
+  .radio-group {
+    margin: 10px 0;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  button[type="reset"] {
+    margin-bottom: 0;
+  }
+}
+
+/* For very small devices (320px and below) */
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 0.85em;
+    padding: 5px;
+  }
+
+  .title {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  td[rowspan] {
+    font-size: 0.9em;
+  }
 }
