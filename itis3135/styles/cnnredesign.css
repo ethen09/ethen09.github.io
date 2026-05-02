@@ -54,7 +54,9 @@ td[rowspan] {
   font-weight: bold;
   background-color: #d49bae;
 }
-ul li{}
+ul li{
+    margin: 10px 0;
+}
 
 .bro {
   text-align: center;

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Personal Webpage | UNC Charlotte</title>
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="/itis3135/styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
       rel="googstylesheet"
@@ -26,14 +26,30 @@
         <h2>Welcome to My Personal Webpage</h2>
         <p>
           Hello! I'm Ethen Young, a student at UNC Charlotte. This webpage
-          serves as a hub for my projects, hobbies, and academic work. Feel
-          free to explore the links below to learn more about me and my
-          interests!
+          serves as a hub for my projects, hobbies, and academic work. Feel free
+          to explore the links below to learn more about me and my interests!
         </p>
       </section>
-      <section id="projects">
-      <a href="itis3135/clientproj/index.html">Client Project</a>
-      <a href="itis3135/cnnredesign.html">CNN Redesign</a>
+
+      <section id="project-section">
+                  <h2> Projects</h2>
+<div id="projects">
+
+        <div class="project-card">
+          <img src="itis3135/images/hairbrush.jpg" alt="Projects Image" />
+          <a href="itis3135/clientproj/index.html">Client Project</a>
+          <p class="project-description">
+            A client project focused on developing a responsive web application for a local business.
+          </p>
+        </div>
+                <div class="project-card">
+          <img src="itis3135/images/hairbrush.jpg" alt="Projects Image" />
+          <a href="itis3135/cnnredesign.html">CNN Redesign</a>
+          <p class="project-description">
+            A case study on redesigning the CNN website to enhance user experience and accessibility.
+          </p>
+        </div>
+      </div>
       </section>
     </main>
 
@@ -46,13 +62,13 @@
         .getElementById("validation-button-html")
         .setAttribute(
           "href",
-          "https://validator.w3.org/check?uri=" + location.href,
+          "https://validator.w3.org/check?uri=" + location.href
         );
       document
         .getElementById("validation-button-css")
         .setAttribute(
           "href",
-          "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href,
+          "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
         );
     </script>
     <script src="itis3135/scripts/HTMLInclude.js"></script>
