@@ -403,7 +403,9 @@ footer {
 }
 .nav-container a:nth-child(4) {
   animation-delay: 0.4s;
-} /* FOOTER LINK FIX */
+} 
+
+
 #dynFooter a,
 #dynFooter a:visited,
 #dynFooter a:link {
@@ -416,10 +418,9 @@ footer {
   text-decoration: underline !important;
 }
 
-/* Validation buttons */
-#dynFooter a[id*="validation-button"],
-#dynFooter a[id*="validation-button"]:visited,
-#dynFooter a[id*="validation-button"]:link {
+#dynFooter a[id*="dynFooter"],
+#dynFooter a[id*="dynFooter"]:visited,
+#dynFooter a[id*="dynFooter"]:link {
   background-color: var(--hunter-green) !important;
   color: white !important;
   text-decoration: none !important;
